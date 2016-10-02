@@ -1,17 +1,17 @@
-url: https://y7kim.github.io
-baseurl: /agency-jekyll-theme/
+url: https://kt4records.github.io
+baseurl: /
 
 # Site settings
-title: Awesome Title
-email: your-email@domain.com
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+title: Kingd Tone 4 Records
+email: kt4records@gmail.com
+description: "Independent record label based at Fres Wota 4, Efate, Vanuatu. Home to a range of upcoming Ni-Van artists"
 
 
 # Team names, titles and social links
 people:
-- name: Kay Garland
+- name: Stanley Wai
   pic: 1
-  position: Lead Designer
+  position: Tech Suport / Grapic Designer
   social:
     - title: twitter
       url: #
@@ -20,9 +20,9 @@ people:
     - title: stack-overflow
       url: #
 
-- name: Larry Parker
+- name: Paxton Beats
   pic: 2
-  position: Lead Marketer
+  position: Producer / Beat maker
   social:
     - title: twitter
       url: #
@@ -31,9 +31,9 @@ people:
     - title: linkedin
       url: #
 
-- name: Diana Petersen
+- name: Be part of our team!
   pic: 3
-  position: Lead Developer
+  position: kt4records@gmail.com
   social:
     - title: twitter
       url: #
@@ -57,9 +57,8 @@ social:
 
 # Postal address (add as many lines as necessary)
 address:
-  - line: 3481 Melrose Place
-  - line: Beverly Hills, CA 90210
-
+  - line: Freswota 4
+  - line: Port Vila, Vanuatu
 # Build settings
 markdown: kramdown
 permalink: pretty
