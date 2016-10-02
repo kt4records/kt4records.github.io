@@ -1,11 +1,11 @@
-Agency Jekyll theme
+Kings Tone 4 Re
 ====================
 
-Agency theme based on [Agency bootstrap theme ](http://startbootstrap.com/templates/agency/)
+Independent record label based at Fres Wota 4, Efate, Vanuatu. Home to a range of upcoming Ni-Van artists
 
 # How to use
 
-###Portfolio 
+###Portfolio
 
 Portfolio projects are in '/_posts'
 
