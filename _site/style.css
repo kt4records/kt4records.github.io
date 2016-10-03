@@ -380,7 +380,7 @@ section h3.section-subheading {
     -moz-transition: all ease .5s;
     transition: all ease .5s;
     background: rgba(254,209,54,.9); /* Fallback when no plugin support */
-    background: rgba(255,240,0, .9);
+    background: rgba(255,0,0, .9);
 }
 
 #portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
