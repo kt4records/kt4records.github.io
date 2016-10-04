@@ -1,11 +1,11 @@
 ---
-title: Round Icons
-subtitle: Graphic Design
+title: Our Mobile App
+subtitle: Mobile Developement
 layout: default
 modal-id: 6
 date: 2014-07-15
 img: roundicons.png
-thumbnail: roundicons-thumbnail.png
+thumbnail: mobile-app.jpg
 alt: image-alt
 project-date: April 2014
 client: Start Bootstrap
