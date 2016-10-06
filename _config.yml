@@ -13,34 +13,19 @@ people:
   pic: 1
   position: Tech Suport / Grapic Designer
   social:
-    - title: twitter
-      url: #
-    - title: facebook
-      url: #
-    - title: stack-overflow
-      url: #
+
 
 - name: Paxton Beats
   pic: 2
   position: Producer / Beat maker
   social:
-    - title: twitter
-      url: #
-    - title: facebook
-      url: #
-    - title: linkedin
-      url: #
 
 - name: Be part of our team!
   pic: 3
   position: kt4records@gmail.com
   social:
-    - title: twitter
-      url: #
-    - title: facebook
-      url: #
-    - title: google-plus
-      url: #
+
+
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
