@@ -80,6 +80,27 @@ artist:
   #    url: #
   #  - title: linkedin
   #    url: #
+- name: Jay P Nalei
+  pic: 6
+  position: Artist
+  social:
+  #  - title: twitter
+  #    url: #
+  #  - title: facebook
+  #    url: #
+  #  - title: stack-overflow
+  #    url: #
+
+- name: Smol Fyah
+  pic: 7
+  position: Artist
+  social:
+  #  - title: twitter
+  #    url: #
+  #  - title: facebook
+  #    url: #
+  #  - title: linkedin
+  #    url: #
 
 
 # Postal address (add as many lines as necessary)
