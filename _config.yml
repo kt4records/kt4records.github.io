@@ -13,32 +13,49 @@ people:
   pic: 1
   position: Tech Suport / Grapic Designer
   social:
-
+    - title: twitter
+  #    url: #
+  #  - title: facebook
+  #    url: #
+  #  - title: stack-overflow
+  #    url: #
 
 - name: Paxton Beats
   pic: 2
   position: Producer / Beat maker
   social:
+  #  - title: twitter
+  #    url: #
+  #  - title: facebook
+  #    url: #
+  #  - title: linkedin
+  #    url: #
 
 - name: Be part of our team!
   pic: 3
   position: kt4records@gmail.com
   social:
-
-
+  #  - title: twitter
+  #    url: #
+  #  - title: facebook
+  #    url: #
+  #  - title: google-plus
+  #    url: #
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
-  - title: twitter
-    url: #
+#  - title: twitter
+#    url: #
   - title: facebook
-    url: #
-  - title: stack-overflow
-    url: #
-  - title: bitbucket
-    url: #
-  - title: github
-    url: #
+    url: http://www.facebook.com/kt4records
+  - title: soundcloud
+    url: http://www.soundcloud.com/kt4records    
+#  - title: stack-overflow
+#    url: #
+#  - title: bitbucket
+#    url: #
+#  - title: github
+#    url: #
 
 # Postal address (add as many lines as necessary)
 address:
