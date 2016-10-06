@@ -57,6 +57,31 @@ social:
 #  - title: github
 #    url: #
 
+# Team names, titles and social links
+artist:
+- name: Rexly
+  pic: 4
+  position: Artist
+  social:
+  #  - title: twitter
+  #    url: #
+  #  - title: facebook
+  #    url: #
+  #  - title: stack-overflow
+  #    url: #
+
+- name: Kevsquare
+  pic: 5
+  position: Artist
+  social:
+  #  - title: twitter
+  #    url: #
+  #  - title: facebook
+  #    url: #
+  #  - title: linkedin
+  #    url: #
+
+
 # Postal address (add as many lines as necessary)
 address:
   - line: Freswota 4
