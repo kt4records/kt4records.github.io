@@ -3,7 +3,7 @@ title: Our Mobile App
 subtitle: Mobile Developement
 layout: default
 modal-id: 7
-date: 2014-07-15
+date: 2014-07-12
 img: mobile-app-preview.jpg
 thumbnail: mobile-app.jpg
 alt: image-alt
