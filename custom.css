@@ -1,24 +1,4 @@
-/* - - - - - - - - - - - - - - - - - - - - -
-
- Title : Example Custom CSS : DinoMaster!
- URL : http://wufoo.com
-
- Last Updated : April 1, 2011
-
-- - - - - - - - - - - - - - - - - - - - - 
-
-INSTRUCTIONS
-1. Copy / Paste all or portions of these
-CSS rules into "custom.css".
-
-2. Experiment and play.
-
-- - - - - - - - - - - - - - - - - - - - - */
-
-/* - - - Default - - - */
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-/* Logo */
-
 
 /* Backgrounds */
 html, body {height: 100%;color: #000;}
