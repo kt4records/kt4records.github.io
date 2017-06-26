@@ -828,8 +828,8 @@
 		_init				: function() {
 
 			this.sources	= {
-				mp3	: '{{ site.url }}/assets/songs/' + this.name + '.mp3',
-				ogg	: '{{ site.url }}/assets/songs/' + this.name + '.ogg'
+				mp3	: '{{ site.media }}/assets/songs/' + this.name + '.mp3',
+				ogg	: '{{ site.media }}/assets/songs/' + this.name + '.ogg'
 			};
 
 		},
@@ -889,7 +889,7 @@
 		},
 		getSource			: function( type ) {
 
-			return '{{ site.url }}/assets/sounds/' + this.action + '.' + type;
+			return '{{ site.media }}/assets/sounds/' + this.action + '.' + type;
 
 		},
 		play				: function( action, loop ) {
