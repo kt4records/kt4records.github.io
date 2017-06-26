@@ -3,10 +3,10 @@ layout: default
 title: Singles &middot; KT4Records
 ---
 <div class="blog">
-<h1>{{ page.title | remove:'KT4Records' }}<i class="demo-icon icon-cassette"></i></h1>
+<h1><a href="{{ site.url }}/cassette/">Mixtapes</a> | {{ page.title | remove:'KT4Records' }}<i class="demo-icon icon-cassette"></i></h1>
     <ul class="posts">
         {% for post in site.categories.singles %}
-        <li>{{ post.icon }}  ... <span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+        <li>{{ post.icon }}  ... <span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> - <span style="font-size:8pt;">{{ post.artist }}</span></li>
         {% endfor %}
     </ul>
 </div>

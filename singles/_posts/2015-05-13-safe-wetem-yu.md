@@ -11,6 +11,6 @@ image_meta: "/assets/images/artwork/hoobz-safe-wetem-yu-remix.jpg"
 artist_meta: "Hoobz"
 title_meta: "Safe Wetem Yu Remix<br> ft. Sheila Wills"
 categories: Single
-tags: [hoobz]
+tags: [hoobz, sheila_wills]
 icon: '<i class="demo-icon icon-cassette"></i>'
 ---

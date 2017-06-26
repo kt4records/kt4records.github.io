@@ -7,6 +7,6 @@ publisher: "KT4Records"
 song: "kt4records/b12-she-got-a-ticket-ft-natty-kipa-smol-fyah-doctor-darling-riddim"
 download: "218693459-kt4records-b12-she-got-a-ticket-ft-natty-kipa-smol-fyah-doctor-darling-riddim.mp3"
 category: Soundcloud
-tags: [b12, nattykippa, smolfyah]
+tags: [b12, natty_kippa, smol_fyah]
 icon: '<i class="fa fa-soundcloud" aria-hidden="true"></i>'
 ---

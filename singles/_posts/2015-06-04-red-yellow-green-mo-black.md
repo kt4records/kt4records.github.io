@@ -11,6 +11,6 @@ image_meta: "/assets/images/artwork/jj-fresh-red-yellow-green-mo-black.jpg"
 artist_meta: "JJ Fresh"
 title_meta: "Red Yellow Green mo Black"
 categories: Single
-tags: [jjfresh]
+tags: [jj_fresh]
 icon: '<i class="demo-icon icon-cassette"></i>'
 ---

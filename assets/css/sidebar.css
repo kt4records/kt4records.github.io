@@ -47,22 +47,22 @@
             margin: 0;
         }
         nav.sidebar.navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
-            color: white;
+            color: #000;
         }
 
     /*adds border top to first nav box */
     nav.sidebar .navbar-nav > li:first-child{
-      border-top: 1px #e5e5e5 solid;
+      border-top: 1px #ccc solid;
     }
 
     /*adds border to bottom nav boxes*/
     nav.sidebar .navbar-nav > li{
-      border-bottom: 1px #e5e5e5 solid;
+      border-bottom: 1px #ccc solid;
     }
     /*adds background on hover*/
     nav.sidebar .navbar-nav > li:hover{
-        color: #fff;
-            background-color: #43600E;
+        color: #666;
+        background-color: #b8b8b8;
     }
     /*removes border last element*/
     nav.sidebar .navbar-nav > li.last{
@@ -146,7 +146,7 @@
   position: fixed;
   top: 15%;
   width: 300px;
-  height: 48%;
+  height: auto;
 }
 
 .nav-side-menu .brand {
@@ -164,7 +164,6 @@
   list-style: none;
   padding: 0px;
   margin: 0px;
-  cursor: pointer;
   /*
     .collapsed{
        .arrow:before{
@@ -230,7 +229,7 @@
 }
 .nav-side-menu li a {
   text-decoration: none;
-  color: #e1ffff;
+  color: #b8b8b8;
 }
 .nav-side-menu li a i {
   padding-left: 10px;
@@ -238,7 +237,7 @@
   padding-right: 20px;
 }
 .nav-side-menu li:hover {
-  background-color: #4f5b69;
+  background-color: #b8b8b8;
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
@@ -343,7 +342,8 @@ margin:0;
 padding:0;
 }
 .main-menu li:hover>a,nav.main-menu li.active>a,.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus,.dropdown-menu>.active>a,.dropdown-menu>.active>a:hover,.dropdown-menu>.active>a:focus,.no-touch .dashboard-page nav.dashboard-menu ul li:hover a,.dashboard-page nav.dashboard-menu ul li.active a {
-
+    color: #ff0000;
+    background-color: #101010;
 }
 .area {
 float: left;
@@ -386,7 +386,7 @@ height: 100%;
 	text-shadow: 0 1px 1px rgba(255,255,255,0.8);
     background-color: #b8b8b8;
     border: 1px solid #b8b8b8;
-    border-top: 1px dotted #f8f8f8;
+    border-top: 1px solid #ccc;
     text-align: center;
 }
 
@@ -412,7 +412,12 @@ a.list-group-item:hover {
 }
 
 .list-group-item:first-child {
-    border-bottom: 1px dotted #f8f8f8;
+    border-bottom: 1px solid #cc;
+}
+a.list-group-item:focus{
+    color: #666;
+    text-decoration: none;
+    background-color: #b8b8b8;
 }
 
 hr {border-style: inset;}

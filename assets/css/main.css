@@ -62,6 +62,7 @@ footer ul li {
 footer {
     border-top: 1px solid #ff0000;
     font-size: .8em;
+    z-index: 1500;
 }
 
 
@@ -131,14 +132,6 @@ ul.posts li {
 
 .nav > li > a:focus, .nav > li > a:hover {
     background-color: #101010;
-}
-
-/* WufooForm */
-#wufoo-z19ut4a317r9emt
-#mail {
-    margin: 0 auto;
-    height: 423px;
-    background: url(../images/mail-loader.gif) no-repeat center center;
 }
 
 /*fb Comments */

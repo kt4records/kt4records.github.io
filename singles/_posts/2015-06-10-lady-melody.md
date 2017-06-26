@@ -11,6 +11,6 @@ image_meta: "/assets/images/artwork/janeth-barako-lady-melody.jpg"
 artist_meta: "Janeth Barako"
 title_meta: "Lady Melody<br> (Cover ft. Jay P Nalei)"
 categories: Single
-tags: [janethbarako, jayp]
+tags: [janeth_barako, jay_p_nalei]
 icon: '<i class="demo-icon icon-cassette"></i>'
 ---

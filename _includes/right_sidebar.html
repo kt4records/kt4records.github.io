@@ -1,6 +1,6 @@
 <nav class="main-menu" style="background-color: transparent;" role="navigation">
     <div class="nav-side-menu-r">
-        {% if page.next and page.next.categories contains "Album" %}
+        {% if page.next and page.next.categories contains "Albums" %}
         <a class="list-group-item" href="{{ site.url }}{{ page.next.url }}" title="Coming up: &ldquo;{{ page.next.title }}&rdquo;" alt="{{ page.next.title }}">
         <div class="brand">{{ page.next.icon }} N E X T &raquo;</div>
              {{ page.next.title }}</a>
@@ -17,7 +17,7 @@
         {% if page.categories contains "Single" %}
             Title: {{ page.title_meta }}
         {% endif %}
-        {% if page.categories contains "Album" %}
+        {% if page.categories contains "Albums" %}
             Album: {{ page.title_meta }}
         {% endif %}</span>
     </ul>

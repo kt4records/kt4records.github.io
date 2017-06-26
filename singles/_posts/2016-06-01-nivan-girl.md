@@ -1,0 +1,16 @@
+---
+layout: cassette
+artist: "Rexly"
+title: "Nivan Girl (Brown Eye Girl)"
+permalink: /cassette/single//:title
+date: 2016-06-01
+cassette: "/assets/images/cassette/rexly-june-singles.png"
+side-a: "'rexly_-_nivan_girl'"
+side-b: "'rexly_-_nivan_girl'"
+image_meta: "/assets/images/artwork/rexly-june-singles.jpg"
+artist_meta: "Rexly"
+title_meta: "Nivan Girl (Brown Eye Girl)<br>ft. RiddiikaL & Alix"
+categories: Single
+tags: [rexly, riddiikal, alix]
+icon: '<i class="demo-icon icon-cassette"></i>'
+---

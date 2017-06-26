@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Tag
+title: Mixtapes &middot; KT4Records
 ---
 
 {% assign rawtags = "" %}
@@ -24,13 +24,16 @@ title: Tag
 {% endfor %}
 
 <div class="tag">
-<h1><a href="{{ site.url }}/cassette/">Mixtapes</a> | {{ page.title }}</h1>
+<h1>{{ page.title | remove:'KT4Records' }}<i class="demo-icon icon-cassette"></i></h1>
 {% for tag in tags %}
-	<p id="{{ tag | slugify }}">{{ tag }}</p>
+	<p id="{{ tag | slugify }}">{{ tag | replace:'_',' ' }}</p>
 	<ul class="posts">
 	 {% for post in site.posts %}
 		 {% if post.tags contains tag %}
 		 <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+{% if post.categories contains "Albums" %}
+ - <span style="font-size:8pt;"> Album</span>
+{% endif%}
 		 </li>
 		 {% endif %}
 	 {% endfor %}
