@@ -1,0 +1,18 @@
+---
+layout: default
+---
+{% include post_nav.html %}
+<br>
+<h1>{{ page.title }}</h1>
+<address>
+    <strong>{{ page.artist }}</strong><br>
+    <small class="meta">Released: {{ page.date | date_to_string }}  by {{ page.publisher }}</small>
+    <a href="http://feeds.soundcloud.com/stream/{{ page.download }}" class="btn btn-default btn-xs download" title="Download as MP3" role="button">Download</a>
+</address>
+<a href="https://soundcloud.com/{{ page.song }}" class="sc-player"></a>
+
+<div class="post">
+  {{ content }}
+</div>
+
+

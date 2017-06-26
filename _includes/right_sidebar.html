@@ -1,0 +1,25 @@
+<nav class="main-menu" style="background-color: transparent;" role="navigation">
+    <div class="nav-side-menu-r">
+        {% if page.next and page.next.categories contains "Album" %}
+        <a class="list-group-item" href="{{ site.url }}{{ page.next.url }}" title="Coming up: &ldquo;{{ page.next.title }}&rdquo;" alt="{{ page.next.title }}">
+        <div class="brand">{{ page.next.icon }} N E X T &raquo;</div>
+             {{ page.next.title }}</a>
+        {% endif %}
+        {% if page.next and page.next.categories contains "Single" %}
+        <a class="list-group-item" href="{{ site.url }}{{ page.next.url }}" title="Coming up: &ldquo;{{ page.next.title }}&rdquo;" alt="{{ page.next.title }}">
+        <div class="brand">{{ page.next.icon }} N E X T &raquo;</div>
+             {{ page.next.title }}</a>
+        {% endif %}
+    <ul class="list-group-item">
+        <div class="brand"><i class="demo-icon icon-pin"></i> I N F O R M A T I O N S</div>
+        <span><img class="artwork" src="{{ site.url }}{{ page.image_meta }}"/><br>
+            Artist: {{ page.artist_meta }}<br>
+        {% if page.categories contains "Single" %}
+            Title: {{ page.title_meta }}
+        {% endif %}
+        {% if page.categories contains "Album" %}
+            Album: {{ page.title_meta }}
+        {% endif %}</span>
+    </ul>
+    </div>
+</nav>

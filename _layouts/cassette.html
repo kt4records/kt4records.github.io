@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    {% include header.html %}
+    {% include style.html %}
+
+    <link rel="stylesheet" href="{{ site.url }}/assets/css/knobKnob.css" type="text/css" />
+    <link rel="stylesheet" href="{{ site.url }}/assets/css/font.css" type="text/css" />
+    <link rel="stylesheet" href="{{ site.url }}/assets/css/sidebar.css" type="text/css" />
+    <script type="text/javascript" src="{{ site.url }}/assets/js/modernizr.custom.69142.js"></script>
+</head>
+
+<body>
+{% include nav.html %}
+{% include left_sidebar.html %}
+{% include right_sidebar.html %}
+
+<!--Player-->
+<div id="vc-container" class="vc-container">
+        <div class="vc-tape-wrapper">
+            <div class="vc-tape">
+                <div class="vc-tape-back">
+                    <div class="vc-tape-wheel vc-tape-wheel-left">
+                        <div></div>
+                    </div>
+                    <div class="vc-tape-wheel vc-tape-wheel-right">
+                        <div></div>
+                    </div>
+                </div>
+                <div class="vc-tape-front vc-tape-side-a">
+                    <span>A</span>
+                </div>
+                <div class="vc-tape-front vc-tape-side-b">
+                    <span>B</span>
+                </div>
+            </div>
+        </div>
+    <div class="track">{{ page.artist }} - {{ page.title }}</div>
+        <div class="vc-loader"></div>
+    </div> <!-- //vc-container -->
+
+    <div class="post">
+      {{ content }}
+    </div>
+    {% include footer.html %}
+    {% include script.html %}
+    {% include jquery.cassette.html %}
+    <script type="text/javascript" src="{{ site.url }}/assets/js/transform.js"></script>
+    <script type="text/javascript" src="{{ site.url }}/assets/js/knobKnob.jquery.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('#vc-container').cassette();
+        });
+
+    </script>
+</body>
+
+</html>

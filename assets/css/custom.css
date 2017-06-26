@@ -1,0 +1,21 @@
+.embed .confirm .create-message {display: none;}
+.embed .confirm a.start-cta {display: none;}
+.embed .confirm h2.freeHeading {
+    padding-top: 0px;
+    font-size: 16px;
+    color: #fff;
+    line-height: 55px;
+    text-align: center;
+    margin: 0px 0px 0;
+}
+.embed .confirm .logo-container {color: #ddd;}
+.embed .confirm h2.freeHeading {
+	text-indent: -9999px;
+	line-height:0;
+}
+.embed .confirm h2.freeHeading:after {
+	text-indent:0;
+	content:'Message Sent!';
+	display:block;
+	line-height: initial;
+}

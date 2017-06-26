@@ -1,25 +1,27 @@
-  <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <span class="copyright">Copyright &copy; {{ site.title }} {{ 'now' | date: "%Y" }}</span>
-                </div>
-                <div class="col-md-4">
-                    <ul class="list-inline social-buttons">
-                        {% for network in site.social %}
-                        <li><a href="{{ network.url }}"><i class="fa fa-{{ network.title }}"></i></a>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <ul class="list-inline quicklinks">
-                        <li><a href="#">Privacy Policy</a>
-                        </li>
-                        <li><a href="#">Terms of Use</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+    <div id="footer">
+           <div class="container">
+            <ul class="list-inline center-block">
+                <li>
+                    <h5>Copyright &copy; 2017</h5>
+                </li>
+                <li>
+                    <h5>
+                        <a href="http://www.facebook.com/kt4records" target="_blank">
+                            <i class="fa fa-facebook" aria-hidden="true"></i> Facebook
+                        </a>
+                    </h5>
+                </li>
+                <li>
+                    <h5>
+                        <a href="mailto:kt4records@gmail.com">
+                            <i class="fa fa-envelope-open-o" aria-hidden="true"></i> Email
+                        </a>
+                    </h5>
+                </li>
+                <li class="nav pull-right scroll-top">
+                    <a href="#" title="Scroll to top">
+                        <i class="glyphicon glyphicon-chevron-up"></i></a>
+                </li>
+            </ul>
         </div>
-    </footer>
+    </div><!-- /footer-->

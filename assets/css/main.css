@@ -1,0 +1,267 @@
+body {
+    padding-top: 50px;
+    color: #101010;
+    background-color: #b8b8b8;
+}
+
+a {
+    text-decoration: none;
+    color: #ff0000;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #b30202
+}
+
+p,
+ul {
+    font-size: 1.5em;
+    line-height: 1.4em;
+
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2.7em;
+}
+
+h3 {
+    font-size: 2.3em;
+}
+
+h4 {
+    font-size: 1.9em;
+}
+
+nav ul,
+footer ul {
+    font-size: 1em;
+    font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+    padding: 0px;
+    list-style: none;
+    font-weight: bold;
+}
+
+nav ul li,
+footer ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+footer {
+    border-top: 1px solid #ff0000;
+    font-size: .8em;
+}
+
+
+/* Blog */
+
+ul.posts {
+    margin: 20px auto 40px;
+    font-size: 1.5em;
+}
+
+ul.posts li {
+    list-style: none;
+}
+
+
+/* Contact */
+
+.contact {
+    margin: 0px 0px 60px;
+}
+
+.contact h1 {
+    font-size: 3em;
+}
+
+.contact h2 {
+    font-size: 2em;
+}
+
+.contact address,
+.contact .download {
+    font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+}
+
+.contact address,
+.contact p {
+    font-size: 1.2em;
+}
+
+.contact .download {
+    float: right;
+    font-size: .8em;
+    text-transform: uppercase;
+}
+
+.starter-template {
+    padding: 20px 15px;
+}
+
+.navbar {
+    color: #000;
+}
+
+#top.navbar {
+    background-color: #000;
+    border-color: #ff0000;
+}
+
+.navbar-toggle {
+    background-color: #000;
+    border-color: #ff0000;
+}
+
+.navbar-toggle .icon-bar {
+    background-color: #ff0000;
+}
+
+.nav > li > a:focus, .nav > li > a:hover {
+    background-color: #101010;
+}
+
+/* WufooForm */
+#wufoo-z19ut4a317r9emt
+#mail {
+    margin: 0 auto;
+    height: 423px;
+    background: url(../images/mail-loader.gif) no-repeat center center;
+}
+
+/*fb Comments */
+.fb_iframe_widget {
+    margin-top: 50px;
+}
+
+/* Previous & Next */
+.post__footer__prev-next li a {
+    display: block;
+    padding: 0;
+    font-family: 'Aldrich';
+	font-size: 10px;
+	font-weight: 300;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+    color: #666;
+    text-shadow: 0 1px 1px rgba(255,255,255,0.8);
+    text-decoration: none;
+    cursor: pointer;
+    -moz-transition-property: color,background-color;
+    -o-transition-property: color,background-color;
+    -webkit-transition-property: color,background-color;
+    transition-property: color background-color;
+    -moz-transition-duration: .5s;
+    -o-transition-duration: .5s;
+    -webkit-transition-duration: .5s;
+    transition-duration: .5s;
+}
+
+.post__footer__prev-next li {
+    width: auto;
+    margin-left: 0;
+    padding: 0;
+    float: left;
+    list-style: none;
+}
+.post__footer__prev-next__next {
+    float: right!important;
+    text-align: center;
+}
+
+.post__footer__prev-next li a:hover {
+    color: #b30202;
+}
+
+span#track_update {
+    font-family: 'Aldrich';
+	font-size: 10px;
+	font-weight: 300;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+    color: #b8b8b8;
+    text-shadow: 0 1px 1px #666;
+}
+
+.post__footer__prev-next li a:hover span#track_update {
+    font-family: 'Aldrich';
+	font-size: 10px;
+	font-weight: 300;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+    color: #b30202;
+}
+
+/* soundcloud */
+.sc-player ol.sc-trackslist li.active, .sc-player ol.sc-trackslist li:hover {
+    background-color: transparent;
+    padding: 5px;
+    color: red;
+}
+
+/* spacer*/
+.category, .tag, .blog {
+	font-size: 10px;
+	font-weight: 300;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+    margin-bottom: 70px;
+}
+
+ul.posts {
+    border-bottom: 1px solid #ff0000;
+    margin: 10px;
+    background-color: #d8d8d8;
+}
+.tag p, .category p {
+    margin: 10px 0 0 10px ;
+    font-size: 1em;
+    color: #ff0000;
+}
+
+.icon-cassette:after {
+content: '.';
+}
+
+a:focus, a:hover {
+    color: #ff0000;
+}
+
+.artwork {
+padding-bottom:10px;
+}
+
+.dropdown-menu {
+background: #000;
+}
+
+.dropdown-menu > li > a{
+    color: #ff0000;
+
+}.dropdown-menu > li > a:hover {
+    background: #101010;
+    color: #ff0000;
+}
+
+.nav .open > a, .nav .open > a:focus {
+background: #101010;
+}
+
+.btn-default {
+    color: #666;
+    background-color: transparent;
+    border-color: #ddd;
+    margin-bottom: 20px;
+}
