@@ -45,13 +45,10 @@
     {% include footer.html %}
     {% include script.html %}
     {% include jquery.cassette.html %}
-    <script type="text/javascript" src="{{ site.url }}/assets/js/transform.js"></script>
-    <script type="text/javascript" src="{{ site.url }}/assets/js/knobKnob.jquery.js"></script>
+    <script type="text/javascript" src="{{ site.url }}/assets/js/transform.min.js"></script>
+    <script type="text/javascript" src="{{ site.url }}/assets/js/knobKnob.jquery.min.js"></script>
     <script type="text/javascript">
-        $(function() {
-            $('#vc-container').cassette();
-        });
-
+        $(function(){$("#vc-container").cassette()})
     </script>
 </body>
 
