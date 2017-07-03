@@ -5,6 +5,7 @@ url: https://kt4records.github.io
 title: Kings Tone 4 Records
 email: kt4records@gmail.com
 description: "Independent record label based at Fres Wota 4, Efate, Vanuatu. Home to a range of upcoming Ni-Van artists"
+image: ""
 markdown: kramdown
 permalink: /:categories/:title
 fbcomments: yes
