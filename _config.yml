@@ -10,3 +10,5 @@ permalink: /:categories/:title
 fbcomments: yes
 media: https://media.githubusercontent.com/media/kt4records/kt4records.github.io/master
 #media: http://127.0.0.1:4000
+gems:
+  - jekyll-seo-tag
