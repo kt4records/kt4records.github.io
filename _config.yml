@@ -12,3 +12,7 @@ media: https://media.githubusercontent.com/media/kt4records/kt4records.github.io
 #media: http://127.0.0.1:4000
 gems:
   - jekyll-seo-tag
+collections:
+  - releases
+      output: true
+      permalink: /:collection/:name
