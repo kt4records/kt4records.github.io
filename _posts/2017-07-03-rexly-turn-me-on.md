@@ -1,0 +1,18 @@
+---
+layout: cassette
+artist: "Rexly ft. Kevsquare & Rose"
+title: "Turn Me On"
+image: "https://media.githubusercontent.com/media/kt4records/kt4records.github.io/master/assets/images/socialmedia/rexly-turn-me-on.jpg"
+description: "Rexly ft. Kevsquare & Rose"
+permalink: /cassette/single//:title
+date: 2015-06-04
+cassette: "/assets/images/cassette/rexly-turn-me-on.png"
+side-a: "'rexly_-_turn_me_on'"
+side-b: "'rexly_-_turn_me_on'"
+image_meta: "/assets/images/artwork/rexly-turn-me-on.jpg"
+artist_meta: "Rexly"
+title_meta: Turn Me On<br>ft. Kevsquare & Rose"
+categories: Singles
+tags: [rexly, kevsquare, rose]
+icon: '<i class="demo-icon icon-cassette"></i>'
+---
