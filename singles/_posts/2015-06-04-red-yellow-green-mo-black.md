@@ -2,7 +2,7 @@
 layout: cassette
 artist: "JJ Fresh"
 title: "Red Yellow Green mo Black"
-permalink: /cassette/single//:title
+permalink: /cassette/singles//:title
 date: 2015-06-04
 cassette: "/assets/images/cassette/jj-fresh-red-yellow-green-mo-black.png"
 side-a: "'jj_fresh_-_red_yellow_green_mo_black'"

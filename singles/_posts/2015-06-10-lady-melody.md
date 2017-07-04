@@ -2,7 +2,7 @@
 layout: cassette
 artist: "Janeth Barako ft. Jay P Nalei"
 title: "Lady Melody (Cover)"
-permalink: /cassette/single//:title
+permalink: /cassette/singles//:title
 date: 2015-06-04
 cassette: "/assets/images/cassette/janeth-barako-lady-melody.png"
 side-a: "'janeth_barako_-_lady_melody'"

@@ -2,7 +2,7 @@
 layout: cassette
 artist: "Hoobz Ft. Sheila Wills"
 title: "Safe Wetem Yu Remix"
-permalink: /cassette/single//:title
+permalink: /cassette/singles//:title
 date: 2015-05-13
 cassette: "/assets/images/cassette/hoobz-safe-wetem-yu-remix.png"
 side-a: "'hoobz_-_safe_wetem_yu_remix'"

@@ -2,7 +2,7 @@
 layout: cassette
 artist: "Rexly"
 title: "Nivan Girl (Brown Eye Girl)"
-permalink: /cassette/single//:title
+permalink: /cassette/singles//:title
 date: 2016-06-01
 cassette: "/assets/images/cassette/rexly-june-singles.png"
 side-a: "'rexly_-_nivan_girl'"
