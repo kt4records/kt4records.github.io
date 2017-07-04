@@ -9,7 +9,7 @@ side-a: "'janeth_barako_-_lady_melody'"
 side-b: "'janeth_barako_-_lady_melody'"
 meta_image: "/assets/images/artwork/janeth-barako-lady-melody.jpg"
 meta_artist: "Janeth Barako"
-meta_title: "Lady Melody<br> (Cover ft. Jay P Nalei)"
+meta_title: "Lady Melody (Cover ft. Jay P Nalei)"
 categories: Single
 tags: [janeth_barako, jay_p_nalei]
 icon: '<i class="demo-icon icon-cassette"></i>'
