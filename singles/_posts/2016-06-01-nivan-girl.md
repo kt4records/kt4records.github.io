@@ -9,7 +9,7 @@ side-a: "'rexly_-_nivan_girl'"
 side-b: "'rexly_-_nivan_girl'"
 meta_image: "/assets/images/artwork/rexly-june-singles.jpg"
 meta_artist: "Rexly"
-meta_title: "Nivan Girl (Brown Eye Girl)<br>ft. RiddiikaL & Ali"
+meta_title: "Nivan Girl (Brown Eye Girl)<br> ft. RiddiikaL & Ali"
 categories: Singles
 tags: [rexly, riddiikal, alix]
 icon: '<i class="demo-icon icon-cassette"></i>'
