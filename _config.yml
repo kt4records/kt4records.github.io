@@ -7,7 +7,7 @@ email: kt4records@gmail.com
 description: "Independent record label based at Fres Wota 4, Efate, Vanuatu. Home to a range of upcoming Ni-Van artists"
 markdown: kramdown
 permalink: /:categories/:title
-fbcomments: yes
+#fbcomments: yes
 media: https://media.githubusercontent.com/media/kt4records/kt4records.github.io/master
 #media: http://127.0.0.1:4000
 gems:

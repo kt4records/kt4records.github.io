@@ -20,6 +20,9 @@
 </head>
 
 <body>
+<div id="fb-root"></div>
+<script>!function(e,t,n){var c,o=e.getElementsByTagName(t)[0]
+e.getElementById(n)||(c=e.createElement(t),c.id=n,c.src="//connect.facebook.net/en_US/sdk.js#xfbml=1",o.parentNode.insertBefore(c,o))}(document,"script","facebook-jssdk")</script>
 {% include nav.html %}
 {% include left_sidebar.html %}
 {% include right_sidebar.html %}
@@ -44,7 +47,13 @@
                 </div>
             </div>
         </div>
-    <div class="track">{{ page.artist }} - {{ page.title }}</div>
+		<div class="track">
+			{{ page.artist }} - {{ page.title }}
+			<div class="fb-share-button"
+				data-href="{{ site.url }}{{ page.url }}"
+				data-layout="button_count">
+			</div>
+		</div>
         <div class="vc-loader"></div>
     </div> <!-- //vc-container -->
 
