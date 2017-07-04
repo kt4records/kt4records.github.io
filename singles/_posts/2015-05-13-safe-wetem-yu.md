@@ -7,10 +7,10 @@ date: 2015-05-13
 cassette: "/assets/images/cassette/hoobz-safe-wetem-yu-remix.png"
 side-a: "'hoobz_-_safe_wetem_yu_remix'"
 side-b: "'hoobz_-_safe_wetem_yu_remix'"
-image: "/assets/images/artwork/hoobz-safe-wetem-yu-remix.jpg"
+meta_image: "/assets/images/artwork/hoobz-safe-wetem-yu-remix.jpg"
 meta_artist: "Hoobz"
-description: "Safe Wetem Yu Remix ft. Sheila Wills"
-categories: Single
+meta_title: "Safe Wetem Yu Remix ft. Sheila Wills"
+categories: Singles
 tags: [hoobz, sheila_wills]
 icon: '<i class="demo-icon icon-cassette"></i>'
 ---

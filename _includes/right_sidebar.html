@@ -5,20 +5,20 @@
         <div class="brand">{{ page.next.icon }} N E X T &raquo;</div>
              {{ page.next.title }}</a>
         {% endif %}
-        {% if page.next and page.next.categories contains "Single" %}
+        {% if page.next and page.next.categories contains "Singles" %}
         <a class="list-group-item" href="{{ site.url }}{{ page.next.url }}" title="Coming up: &ldquo;{{ page.next.title }}&rdquo;" alt="{{ page.next.title }}">
         <div class="brand">{{ page.next.icon }} N E X T &raquo;</div>
              {{ page.next.title }}</a>
         {% endif %}
     <ul class="list-group-item">
         <div class="brand"><i class="demo-icon icon-pin"></i> I N F O R M A T I O N S</div>
-        <span><img class="artwork" src="{{ site.media }}{{ page.image }}"/><br>
+        <span><img class="artwork" src="{{ site.media }}{{ page.meta_image }}"/><br>
             Artist: {{ page.meta_artist }}<br>
-        {% if page.categories contains "Single" %}
-            Title: {{ page.description }}
+        {% if page.categories contains "Singles" %}
+            Title: {{ page.meta_title }}
         {% endif %}
         {% if page.categories contains "Albums" %}
-            Album: {{ page.description }}
+            Album: {{ page.meta_title }}
         {% endif %}</span>
     </ul>
     </div>
