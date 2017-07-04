@@ -5,7 +5,7 @@
         <div class="brand">&laquo; P R E V I O U S {{ page.previous.icon }}</div>
         {{ page.previous.title }}</a>
         {% endif %}
-        {% if page.previous and page.previous.categories contains "Single" %}
+        {% if page.previous and page.previous.categories contains "Singles" %}
         <a class="list-group-item" href="{{ site.url }}{{ page.previous.url }}" title="Previously: &ldquo;{{ page.previous.title }}&rdquo;" alt="{{ page.previous.title }}">
         <div class="brand">&laquo; P R E V I O U S {{ page.previous.icon }}</div>
             {{ page.previous.title }}</a>
@@ -15,7 +15,7 @@
         <span>Side A:<br> {{ page.side-a | remove:"'" | replace:'_'," " }}<br>
               Side B:<br> {{ page.side-b | remove:"'" | replace:'_'," " }}</span>
         <div class="brand">D O W N L O A D</div>
-        {% if page.categories contains "Single" %}
+        {% if page.categories contains "Singles" %}
             <span><a href="{{ site.media }}/assets/songs/{{ page.side-a | remove:"'" }}.mp3" target="_blank" class="btn btn-default btn-xs download" title="Download as MP3" role="button" download="{{ site.media }}/assets/songs/{{ page.side-a | remove:"'" }}.mp3"><i class="demo-icon icon-download"></i></a></span>
         {% endif %}
         {% if page.categories contains "Albums" %}
