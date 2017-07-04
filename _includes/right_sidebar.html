@@ -12,13 +12,13 @@
         {% endif %}
     <ul class="list-group-item">
         <div class="brand"><i class="demo-icon icon-pin"></i> I N F O R M A T I O N S</div>
-        <span><img class="artwork" src="{{ site.media }}{{ page.meta_image }}"/><br>
+        <span><img class="artwork" src="{{ site.media }}{{ page.image }}"/><br>
             Artist: {{ page.meta_artist }}<br>
         {% if page.categories contains "Single" %}
-            Title: {{ page.meta_title }}
+            Title: {{ page.description }}
         {% endif %}
         {% if page.categories contains "Albums" %}
-            Album: {{ page.meta_title }}
+            Album: {{ page.description }}
         {% endif %}</span>
     </ul>
     </div>

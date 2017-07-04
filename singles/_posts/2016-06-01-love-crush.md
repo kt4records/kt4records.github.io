@@ -7,9 +7,9 @@ date: 2016-06-01
 cassette: "/assets/images/cassette/rexly-june-singles.png"
 side-a: "'rexly_-_love_crush'"
 side-b: "'rexly_-_love_crush'"
-meta_image: "/assets/images/artwork/rexly-june-singles.jpg"
+image: "/assets/images/artwork/rexly-june-singles.jpg"
 meta_artist: "Rexly"
-meta_title: "Love Crush ft. Krassrut"
+description: "Love Crush ft. Krassrut"
 categories: Single
 tags: [rexly, krassrut]
 icon: '<i class="demo-icon icon-cassette"></i>'

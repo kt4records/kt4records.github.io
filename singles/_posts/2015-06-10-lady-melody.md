@@ -7,9 +7,9 @@ date: 2015-06-04
 cassette: "/assets/images/cassette/janeth-barako-lady-melody.png"
 side-a: "'janeth_barako_-_lady_melody'"
 side-b: "'janeth_barako_-_lady_melody'"
-meta_image: "/assets/images/artwork/janeth-barako-lady-melody.jpg"
+image: "/assets/images/artwork/janeth-barako-lady-melody.jpg"
 meta_artist: "Janeth Barako"
-meta_title: "Lady Melody (Cover ft. Jay P Nalei)"
+description: "Lady Melody (Cover ft. Jay P Nalei)"
 categories: Single
 tags: [janeth_barako, jay_p_nalei]
 icon: '<i class="demo-icon icon-cassette"></i>'
