@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="">
 <head>
+<title>{{ page.title }} &middot; KT4Records</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="dns-prefetch" href="//media.githubusercontent.com" />
@@ -9,8 +10,8 @@
 <meta property="og:type" content="music.song" />
 <meta property="og:title" content="{{ page.title }}" />
 <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
-<meta property="og:description" content="{{ page.meta_artist }} - {{ page.meta_title | remove:'<br>' }}" />
-<meta property="og:image" content="{{ site.media }}{{ page.meta_image }}" />
+<meta property="og:description" content="{{ page.artist }} - {{ page.description | replace:'<br>',' ' }}" />
+<meta property="og:image" content="{{ site.media }}/assets/images/socialmedia/{{ page.artwork }}.jpg" />
 {% include header.html %}
 {% include style.html %}
 {% include knobKnob.html %}
@@ -20,9 +21,6 @@
 </head>
 
 <body>
-<div id="fb-root"></div>
-<script>!function(e,t,n){var c,o=e.getElementsByTagName(t)[0]
-e.getElementById(n)||(c=e.createElement(t),c.id=n,c.src="//connect.facebook.net/en_US/sdk.js#xfbml=1",o.parentNode.insertBefore(c,o))}(document,"script","facebook-jssdk")</script>
 {% include nav.html %}
 {% include left_sidebar.html %}
 {% include right_sidebar.html %}
@@ -51,9 +49,69 @@ e.getElementById(n)||(c=e.createElement(t),c.id=n,c.src="//connect.facebook.net/
         <div class="vc-loader"></div>
     </div> <!-- //vc-container -->
 
-    <div class="post">
-      {{ content }}
-    </div>
+    <div class="post hidden-lg">
+	<ul class="list-group-item">
+        <div class="brand"><i class="demo-icon icon-pin"></i> I N F O R M A T I O N S</div>
+        <span><img class="artwork" src="{{ site.media }}/assets/images/artwork/{{ page.artwork }}.jpg"/><br>
+            Artist: {{ page.artist }}<br>
+        {% if page.categories contains "Single" %}
+            Title: {{ page.description }}
+        {% endif %}
+        {% if page.categories contains "Album" %}
+            Album: {{ page.title }}<br>
+			{{ page.description }}
+        {% endif %}</span>
+    </ul>
+    <ul class="list-group-item">
+        <div class="brand">T R A C K L I S T <i class="demo-icon icon-pin"></i></div>
+        <span>Side A:<br> {{ page.side-a | remove:"'" | replace:'_'," " }}<br>
+              Side B:<br> {{ page.side-b | remove:"'" | replace:'_'," " }}</span>
+        <div class="brand">D O W N L O A D</div>
+        {% if page.categories contains "Single" %}
+            <span><a href="{{ site.media }}/assets/songs/{{ page.side-a | remove:"'" }}.mp3" target="_blank" class="btn btn-default btn-xs download" title="Download as MP3" role="button" download="{{ site.media }}/assets/songs/{{ page.side-a | remove:"'" }}.mp3"><i class="demo-icon icon-download"></i></a></span>
+        {% endif %}
+        {% if page.categories contains "Album" %}
+            <span><a href="{{ site.media }}/assets/archieve/{{ page.artwork }}.zip" target="_blank" class="btn btn-default btn-xs download" title="Download as ZIP" role="button" download="{{ site.media }}/assets/archieve/{{ page.artwork }}.zip"><i class="demo-icon icon-download"></i></a></span>
+        {% endif %}
+    </ul>
+
+    <ul class="list-inline center-block">
+		<li class="previous">
+    	{% if page.categories contains "Album" %}
+        	{% if page.previous and page.previous.categories contains "Album" %}
+        	<a class="list-group-item" href="{{ site.url }}{{ page.previous.url }}" title="Previously: &ldquo;{{ page.previous.title }}&rdquo;" alt="{{ page.previous.title }}">
+        	<div class="brand">&laquo; P R E V I O U S {{ page.previous.icon }}</div>
+        	{{ page.previous.title }}</a>
+        	{% endif %}
+		{% endif %}
+		{% if page.categories contains "Single" %}
+        	{% if page.previous and page.previous.categories contains "Single" %}
+        	<a class="list-group-item" href="{{ site.url }}{{ page.previous.url }}" title="Previously: &ldquo;{{ page.previous.title }}&rdquo;" alt="{{ page.previous.title }}">
+        	<div class="brand">&laquo; P R E V I O U S {{ page.previous.icon }}</div>
+            {{ page.previous.title }}</a>
+        	{% endif %}
+		{% endif %}
+		</li>
+ 		<li class="next">
+  		{% if page.categories contains "Album" %}
+        	{% if page.next and page.next.categories contains "Album" %}
+        	<a class="list-group-item" href="{{ site.url }}{{ page.next.url }}" title="Coming up: &ldquo;{{ page.next.title }}&rdquo;" alt="{{ page.next.title }}">
+        	<div class="brand">{{ page.next.icon }} N E X T &raquo;</div>
+            {{ page.next.title }}</a>
+        	{% endif %}
+		{% endif %}
+		{% if page.categories contains "Single" %}
+        	{% if page.next and page.next.categories contains "Single" %}
+        	<a class="list-group-item" href="{{ site.url }}{{ page.next.url }}" title="Coming up: &ldquo;{{ page.next.title }}&rdquo;" alt="{{ page.next.title }}">
+        	<div class="brand">{{ page.next.icon }} N E X T &raquo;</div>
+            {{ page.next.title }}</a>
+        	{% endif %}
+		{% endif %}
+		</li>
+	</ul>
+   	{{ content }}<!--/content-->
+
+    </div><!--/post-->
     {% include footer.html %}
     {% include script.html %}
     {% include jquery.cassette.html %}

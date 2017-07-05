@@ -1,27 +1,30 @@
-<nav class="navbar navbar-inverse sidebar navbar-fixed-top" style="background-color: transparent;" role="navigation">
+<nav class="navbar navbar-inverse sidebar navbar-fixed-top visible-lg" style="background-color: transparent;" role="navigation">
     <div class="nav-side-menu">
-        {% if page.previous and page.previous.categories contains "Albums" %}
-        <a class="list-group-item" href="{{ site.url }}{{ page.previous.url }}" title="Previously: &ldquo;{{ page.previous.title }}&rdquo;" alt="{{ page.previous.title }}">
-        <div class="brand">&laquo; P R E V I O U S {{ page.previous.icon }}</div>
-        {{ page.previous.title }}</a>
-        {% endif %}
-        {% if page.previous and page.previous.categories contains "Singles" %}
-        <a class="list-group-item" href="{{ site.url }}{{ page.previous.url }}" title="Previously: &ldquo;{{ page.previous.title }}&rdquo;" alt="{{ page.previous.title }}">
-        <div class="brand">&laquo; P R E V I O U S {{ page.previous.icon }}</div>
+ 		{% if page.categories contains "Album" %}
+        	{% if page.previous and page.previous.categories contains "Album" %}
+        	<a class="list-group-item" href="{{ site.url }}{{ page.previous.url }}" title="Previously: &ldquo;{{ page.previous.title }}&rdquo;" alt="{{ page.previous.title }}">
+        	<div class="brand">&laquo; P R E V I O U S {{ page.previous.icon }}</div>
+        	{{ page.previous.title }}</a>
+        	{% endif %}
+		{% endif %}
+		{% if page.categories contains "Single" %}
+        	{% if page.previous and page.previous.categories contains "Single" %}
+        	<a class="list-group-item" href="{{ site.url }}{{ page.previous.url }}" title="Previously: &ldquo;{{ page.previous.title }}&rdquo;" alt="{{ page.previous.title }}">
+        	<div class="brand">&laquo; P R E V I O U S {{ page.previous.icon }}</div>
             {{ page.previous.title }}</a>
-        {% endif %}
+        	{% endif %}
+		{% endif %}
     <ul class="list-group-item">
         <div class="brand">T R A C K L I S T <i class="demo-icon icon-pin"></i></div>
         <span>Side A:<br> {{ page.side-a | remove:"'" | replace:'_'," " }}<br>
               Side B:<br> {{ page.side-b | remove:"'" | replace:'_'," " }}</span>
         <div class="brand">D O W N L O A D</div>
-        {% if page.categories contains "Singles" %}
+        {% if page.categories contains "Single" %}
             <span><a href="{{ site.media }}/assets/songs/{{ page.side-a | remove:"'" }}.mp3" target="_blank" class="btn btn-default btn-xs download" title="Download as MP3" role="button" download="{{ site.media }}/assets/songs/{{ page.side-a | remove:"'" }}.mp3"><i class="demo-icon icon-download"></i></a></span>
         {% endif %}
-        {% if page.categories contains "Albums" %}
-            <span><a href="{{ site.media }}/assets/archieve/{{ page.download }}.zip" target="_blank" class="btn btn-default btn-xs download" title="Download as ZIP" role="button" download="{{ site.media }}/assets/archieve/{{ page.download }}.zip"><i class="demo-icon icon-download"></i></a></span>
+        {% if page.categories contains "Album" %}
+            <span><a href="{{ site.media }}/assets/archieve/{{ page.artwork }}.zip" target="_blank" class="btn btn-default btn-xs download" title="Download as ZIP" role="button" download="{{ site.media }}/assets/archieve/{{ page.artwork }}.zip"><i class="demo-icon icon-download"></i></a></span>
         {% endif %}
     </ul>
     </div>
-    <div class="fb-share-button" data-href="{{ site.url }}{{ page.url }}" data-layout="button_count"></div>
 </nav>

@@ -1,24 +1,29 @@
-<nav class="main-menu" style="background-color: transparent;" role="navigation">
+  <nav class="main-menu visible-lg" style="background-color: transparent;" role="navigation">
     <div class="nav-side-menu-r">
-        {% if page.next and page.next.categories contains "Albums" %}
-        <a class="list-group-item" href="{{ site.url }}{{ page.next.url }}" title="Coming up: &ldquo;{{ page.next.title }}&rdquo;" alt="{{ page.next.title }}">
-        <div class="brand">{{ page.next.icon }} N E X T &raquo;</div>
-             {{ page.next.title }}</a>
-        {% endif %}
-        {% if page.next and page.next.categories contains "Singles" %}
-        <a class="list-group-item" href="{{ site.url }}{{ page.next.url }}" title="Coming up: &ldquo;{{ page.next.title }}&rdquo;" alt="{{ page.next.title }}">
-        <div class="brand">{{ page.next.icon }} N E X T &raquo;</div>
-             {{ page.next.title }}</a>
-        {% endif %}
+		{% if page.categories contains "Album" %}
+        	{% if page.next and page.next.categories contains "Album" %}
+        	<a class="list-group-item" href="{{ site.url }}{{ page.next.url }}" title="Coming up: &ldquo;{{ page.next.title }}&rdquo;" alt="{{ page.next.title }}">
+        	<div class="brand">{{ page.next.icon }} N E X T &raquo;</div>
+            {{ page.next.title }}</a>
+        	{% endif %}
+		{% endif %}
+		{% if page.categories contains "Single" %}
+        	{% if page.next and page.next.categories contains "Single" %}
+        	<a class="list-group-item" href="{{ site.url }}{{ page.next.url }}" title="Coming up: &ldquo;{{ page.next.title }}&rdquo;" alt="{{ page.next.title }}">
+        	<div class="brand">{{ page.next.icon }} N E X T &raquo;</div>
+            {{ page.next.title }}</a>
+        	{% endif %}
+		{% endif %}
     <ul class="list-group-item">
         <div class="brand"><i class="demo-icon icon-pin"></i> I N F O R M A T I O N S</div>
-        <span><img class="artwork" src="{{ site.media }}{{ page.meta_image }}"/><br>
-            Artist: {{ page.meta_artist }}<br>
-        {% if page.categories contains "Singles" %}
-            Title: {{ page.meta_title }}
+        <span><img class="artwork" src="{{ site.media }}/assets/images/artwork/{{ page.artwork }}.jpg"/><br>
+            Artist: {{ page.artist }}<br>
+        {% if page.categories contains "Single" %}
+            Title: {{ page.description }}
         {% endif %}
-        {% if page.categories contains "Albums" %}
-            Album: {{ page.meta_title }}
+        {% if page.categories contains "Album" %}
+            Album: {{ page.title }}<br>
+			{{ page.description }}
         {% endif %}</span>
     </ul>
     </div>

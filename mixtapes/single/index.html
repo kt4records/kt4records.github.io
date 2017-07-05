@@ -1,0 +1,14 @@
+---
+layout: default
+title: Single
+---
+<div class="blog">
+<h1><a href="{{ site.url }}/mixtapes">Mixtapes</a> | {{ page.title }}<i class="demo-icon icon-cassette"></i></h1>
+    <ul class="posts">
+        {% for post in site.categories.single %}
+        	<li>{{ post.icon }}  ... <span>{{ post.publish | date_to_string }}</span> &raquo; <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> - <span style="font-size:8pt;">{{ post.artist }}</span></li>
+        {% endfor %}
+    </ul>
+</div>
+
+

@@ -31,7 +31,7 @@ title: Mixtapes
 	 {% for post in site.posts %}
 		 {% if post.tags contains tag %}
 		 <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
-{% if post.categories contains "Albums" %}
+{% if post.categories contains "Album" %}
  - <span style="font-size:8pt;"> Album</span>
 {% endif%}
 		 </li>
