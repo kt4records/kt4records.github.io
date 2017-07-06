@@ -10,6 +10,3 @@ permalink: /:categories/:title
 fbcomments: yes
 media: https://media.githubusercontent.com/media/kt4records/kt4records.github.io/master
 adbitly: https://adbitly.com/st/?api=2c7fc6867b37ffc6cc0b7308d00b2369b3f60ef1&url=
-#media: http://127.0.0.1:4000
-gems:
-  - jekyll-seo-tag
