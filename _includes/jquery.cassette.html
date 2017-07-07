@@ -1,358 +1,62 @@
-<script type="text/javascript">
-    ! function(t, e, i) {
-        var s = {
-            getSupportedType: function() {
-                var t = document.createElement("audio")
-                return t.canPlayType("audio/mpeg;")
-            }
-        }
-        e.Cassette = function(t, i) {
-            this.$el = e(i), this._init(t)
-        }, e.Cassette.defaults = {
-            songs: [{{ page.a }}, {{ page.b }}],
-            fallbackMessage: "HTML5 audio not supported",
-            initialVolume: .7
-        }, e.Cassette.prototype = {
-            _init: function(t) {
-                var i = this
-                this.options = e.extend(!0, {}, e.Cassette.defaults, t), this.currentSide = 1, this.cntTime = 0, this.timeIterator = 0, this.elapsed = 0, this.lastaction = "", this.isMoving = !1, this.$loader = this.$el.find("div.vc-loader").show(), e.when(this._createSides()).done(function() {
-                    i.$loader.hide(), i._createPlayer(), i.sound = new e.Sound, i._loadEvents()
-                })
-            },
-            _getSide: function() {
-                return 1 === this.currentSide ? {
-                    current: this.side1,
-                    reverse: this.side2
-                } : {
-                    current: this.side2,
-                    reverse: this.side1
-                }
-            },
-            _createSides: function() {
-                var t = [],
-                    i = [],
-                    s = this,
-                    n = 0
-                return e.Deferred(function(o) {
-                    for (var a = 0, r = s.options.songs.length; r > a; ++a) {
-                        var d = new e.Song(s.options.songs[a], a)
-                        e.when(d.loadMetadata()).done(function(a) {
-                            a.id < r / 2 ? t.push(a) : i.push(a), ++n, n === r && (s.side1 = new e.Side("side1", t, "start"), s.side2 = new e.Side("side2", i, "end"), o.resolve())
-                        })
-                    }
-                }).promise()
-            },
-            _createPlayer: function() {
-                this.$audioEl = e('<audio id="audioElem"><span>' + this.options.fallbackMessage + "</span></audio>"), this.$el.prepend(this.$audioEl), this.audio = this.$audioEl.get(0), this._createControls(), this.$theTape = this.$el.find("div.vc-tape"), this.$wheelLeft = this.$theTape.find("div.vc-tape-wheel-left"), this.$wheelRight = this.$theTape.find("div.vc-tape-wheel-right"), this.$tapeSideA = this.$theTape.find("div.vc-tape-side-a").show(), this.$tapeSideB = this.$theTape.find("div.vc-tape-side-b")
-            },
-            _createControls: function() {
-                var t = this
-                this.$controls = e('<ul class="vc-controls" style="display:none;"/>'), this.$cPlay = e('<li class="vc-control-play">Play<span></span></li>'), this.$cRewind = e('<li class="vc-control-rewind">Rew<span></span></li>'), this.$cForward = e('<li class="vc-control-fforward">FF<span></span></li>'), this.$cStop = e('<li class="vc-control-stop">Stop<span></span></li>'), this.$cSwitch = e('<li class="vc-control-switch">Switch<span></span></li>'), this.$controls.append(this.$cPlay).append(this.$cRewind).append(this.$cForward).append(this.$cStop).append(this.$cSwitch).appendTo(this.$el), this.$volume = e('<div style="display:none;" class="vc-volume-wrap"><div class="vc-volume-control"><div class="vc-volume-knob"></div></div></div> ').appendTo(this.$el), document.createElement("audio").canPlayType && (document.createElement("audio").canPlayType("audio/mpeg") || document.createElement("audio").canPlayType("audio/ogg")) && (this.$controls.show(), this.$volume.show(), this.$volume.find("div.vc-volume-knob").knobKnob({
-                    snap: 10,
-                    value: 359 * this.options.initialVolume,
-                    turn: function(e) {
-                        t._changeVolume(e)
-                    }
-                }), this.audio.volume = this.options.initialVolume)
-            },
-            _loadEvents: function() {
-                var t = this
-                this.$cSwitch.on("mousedown", function(i) {
-                    t._setButtonActive(e(this)), t._switchSides()
-                }), this.$cPlay.on("mousedown", function(i) {
-                    t._setButtonActive(e(this)), t._play()
-                }), this.$cStop.on("mousedown", function(i) {
-                    t._setButtonActive(e(this)), t._stop()
-                }), this.$cForward.on("mousedown", function(i) {
-                    t._setButtonActive(e(this)), t._forward()
-                }), this.$cRewind.on("mousedown", function(i) {
-                    t._setButtonActive(e(this)), t._rewind()
-                }), this.$audioEl.on("timeupdate", function(e) {
-                    t.cntTime = t.timeIterator + t.audio.currentTime
-                    var i = t._getWheelValues(t.cntTime)
-                    t._updateWheelValue(i)
-                }), this.$audioEl.on("loadedmetadata", function(t) {}), this.$audioEl.on("ended", function(e) {
-                    t.timeIterator += t.audio.duration, t._play()
-                })
-            },
-            _setButtonActive: function(t) {
-                t.addClass("vc-control-pressed"), setTimeout(function() {
-                    t.removeClass("vc-control-pressed")
-                }, 100)
-            },
-            _updateAction: function(t) {
-                this.lastaction = t
-            },
-            _prepare: function(t) {
-                this._clear(), this.$audioEl.attr("src", t.getSource(s.getSupportedType()))
-            },
-            _switchSides: function() {
-                if (this.isMoving) return alert("Please stop the player before switching sides."), !1
-                this.sound.play("0BwOVcFj5qu4TMks0ZlZrUElWT0U")
-                var t = this
-                this.lastaction = "", 1 === this.currentSide ? (this.currentSide = 2, this.$theTape.css({
-                    "-webkit-transform": "rotate3d(0, 1, 0, 180deg)",
-                    "-moz-transform": "rotate3d(0, 1, 0, 180deg)",
-                    "-o-transform": "rotate3d(0, 1, 0, 180deg)",
-                    "-ms-transform": "rotate3d(0, 1, 0, 180deg)",
-                    transform: "rotate3d(0, 1, 0, 180deg)"
-                }), setTimeout(function() {
-                    t.$tapeSideA.hide(), t.$tapeSideB.show(), t.cntTime = t._getPosTime()
-                }, 200)) : (this.currentSide = 1, this.$theTape.css({
-                    "-webkit-transform": "rotate3d(0, 1, 0, 0deg)",
-                    "-moz-transform": "rotate3d(0, 1, 0, 0deg)",
-                    "-o-transform": "rotate3d(0, 1, 0, 0deg)",
-                    "-ms-transform": "rotate3d(0, 1, 0, 0deg)",
-                    transform: "rotate3d(0, 1, 0, 0deg)"
-                }), setTimeout(function() {
-                    t.$tapeSideB.hide(), t.$tapeSideA.show(), t.cntTime = t._getPosTime()
-                }, 200))
-            },
-            _updateButtons: function(t) {
-                var e = "vc-control-active"
-                switch (this.$cPlay.removeClass(e), this.$cStop.removeClass(e), this.$cRewind.removeClass(e), this.$cForward.removeClass(e), t) {
-                    case "play":
-                        this.$cPlay.addClass(e)
-                        break
-                    case "rewind":
-                        this.$cRewind.addClass(e)
-                        break
-                    case "forward":
-                        this.$cForward.addClass(e)
-                }
-            },
-            _changeVolume: function(t) {
-                this.audio.volume = t
-            },
-            _play: function() {
-                var t = this
-                this._updateButtons("play"), e.when(this.sound.play("0BwOVcFj5qu4TMVJVWWFEUWcxOHM")).done(function() {
-                    var i = t._updateStatus()
-                    i && (t._prepare(t._getSide().current.getSong(i.songIdx)), t.$audioEl.on("canplay", function(s) {
-                        e(this).off("canplay"), t.audio.currentTime = i.timeInSong, t.audio.play(), t.isMoving = !0, t._setWheelAnimation("2s", "play")
-                    }))
-                })
-            },
-            _updateStatus: function(t) {
-                var e = this.cntTime
-                if (this._stop(!0), this._setSidesPosStatus("middle"), "forward" === this.lastaction ? e += this.elapsed : "rewind" === this.lastaction && (e -= this.elapsed), e >= this._getSide().current.getDuration()) return this._stop(t), this._setSidesPosStatus("end"), !1
-                this._resetElapsed()
-                var i = this._getSongInfoByTime(e)
-                return this.cntTime = e, this.timeIterator = i.iterator, i
-            },
-            _rewind: function() {
-                var t = this,
-                    s = "rewind"
-                return "start" === this._getSide().current.getPositionStatus() ? !1 : (this._updateButtons(s), e.when(this.sound.play("0BwOVcFj5qu4TMVJVWWFEUWcxOHM")).done(function() {
-                    t._updateStatus(!0), t.isMoving = !0, t._updateAction(s), t.sound.play("0BwOVcFj5qu4TZGhLYlBvdzk3Z2M", !0), t._setWheelAnimation("0.5s", s), t._timer()
-                }), i)
-            },
-            _forward: function() {
-                var t = this,
-                    s = "forward"
-                return "end" === this._getSide().current.getPositionStatus() ? !1 : (this._updateButtons(s), e.when(this.sound.play("0BwOVcFj5qu4TMVJVWWFEUWcxOHM")).done(function() {
-                    t._updateStatus(!0), t.isMoving = !0, t._updateAction(s), t.sound.play("0BwOVcFj5qu4TYndlYWVIN0JGVmM", !0), t._setWheelAnimation("0.5s", s), t._timer()
-                }), i)
-            },
-            _stop: function(t) {
-                t || (this._updateButtons("stop"), this.sound.play("0BwOVcFj5qu4TMVJVWWFEUWcxOHM")), this.isMoving = !1, this._stopWheels(), this.audio.pause(), this._stopTimer()
-            },
-            _clear: function() {
-                this.$audioEl.children("source").remove()
-            },
-            _setSidesPosStatus: function(t) {
-                switch (this._getSide().current.setPositionStatus(t), t) {
-                    case "middle":
-                        this._getSide().reverse.setPositionStatus(t)
-                        break
-                    case "start":
-                        this._getSide().reverse.setPositionStatus("end")
-                        break
-                    case "end":
-                        this._getSide().reverse.setPositionStatus("start")
-                }
-            },
-            _getSongInfoByTime: function(t) {
-                for (var e = {
-                        songIdx: 0,
-                        timeInSong: 0
-                    }, i = this._getSide().current, s = i.getPlaylist(), n = i.getPlaylistCount(), o = 0, a = 0; n > a; ++a) {
-                    var r = s[a],
-                        d = r.getDuration()
-                    if (o += d, o > t) return e.songIdx = a, e.timeInSong = t - (o - d), e.iterator = o - d, e
-                }
-                return e
-            },
-            _getWheelValues: function(t) {
-                var e = this._getSide().current.getDuration(),
-                    i = {
-                        left: 1 === this.currentSide ? -70 / e * t + 70 : 70 / e * t,
-                        right: 1 === this.currentSide ? 70 / e * t : -70 / e * t + 70
-                    }
-                return i
-            },
-            _getPosTime: function() {
-                var t = this.$wheelLeft.data("wheel"),
-                    e = this.$wheelRight.data("wheel")
-                t === i && (t = 70), e === i && (e = 0)
-                var s = this._getSide().current.getDuration(),
-                    n = 2 === this.currentSide ? s * t / 70 : s * e / 70
-                return n
-            },
-            _updateWheelValue: function(t) {
-                this.$wheelLeft.data("wheel", t.left).css({
-                    "box-shadow": "0 0 0 " + t.left + "px black"
-                }), this.$wheelRight.data("wheel", t.right).css({
-                    "box-shadow": "0 0 0 " + t.right + "px black"
-                })
-            },
-            _setWheelAnimation: function(t, e) {
-                var i = this,
-                    s = ""
-                switch (this.currentSide) {
-                    case 1:
-                        "play" === e || "forward" === e ? s = "rotateLeft" : "rewind" === e && (s = "rotateRight")
-                        break
-                    case 2:
-                        "play" === e || "forward" === e ? s = "rotateRight" : "rewind" === e && (s = "rotateLeft")
-                }
-                var n = {
-                    "-webkit-animation": s + " " + t + " linear infinite forwards",
-                    "-moz-animation": s + " " + t + " linear infinite forwards",
-                    "-o-animation": s + " " + t + " linear infinite forwards",
-                    "-ms-animation": s + " " + t + " linear infinite forwards",
-                    animation: s + " " + t + " linear infinite forwards"
-                }
-                setTimeout(function() {
-                    i.$wheelLeft.css(n), i.$wheelRight.css(n)
-                }, 0)
-            },
-            _stopWheels: function() {
-                var t = {
-                    "-webkit-animation": "none",
-                    "-moz-animation": "none",
-                    "-o-animation": "none",
-                    "-ms-animation": "none",
-                    animation: "none"
-                }
-                this.$wheelLeft.css(t), this.$wheelRight.css(t)
-            },
-            _timer: function() {
-                var t = this,
-                    e = (new Date).getTime(),
-                    i = 0
-                this._resetElapsed(), this.isSeeking = !0, this._setSidesPosStatus("middle"), this.isSeeking && (clearTimeout(this.timertimeout), this.timertimeout = setTimeout(function() {
-                    t._timerinstance(e, i)
-                }, 100))
-            },
-            _timerinstance: function(t, e) {
-                var i = this
-                e += 100, this.elapsed = Math.floor(e / 20) / 10, Math.round(this.elapsed) == this.elapsed && (this.elapsed += 0)
-                var s = this.cntTime "forward" === this.lastaction ? s += this.elapsed : "rewind" === this.lastaction && (s -= this.elapsed)
-                var n = this._getWheelValues(s)
-                if (this._updateWheelValue(n), s >= this._getSide().current.getDuration() || 0 >= s) return this._stop(), 0 >= s ? this.cntTime = 0 : this.cntTime = s, this._resetElapsed(), 0 >= s ? this._setSidesPosStatus("start") : this._setSidesPosStatus("end"), !1
-                var o = (new Date).getTime() - t - e
-                this.isSeeking && (clearTimeout(this.timertimeout), this.timertimeout = setTimeout(function() {
-                    i._timerinstance(t, e)
-                }, 100 - o))
-            },
-            _stopTimer: function() {
-                clearTimeout(this.timertimeout), this.isSeeking = !1
-            },
-            _resetElapsed: function() {
-                this.elapsed = 0
-            }
-        }, e.Side = function(t, e, i) {
-            this.id = t, this.status = i, this.playlist = e.sort(function(t, e) {
-                var i = t.id,
-                    s = e.id
-                return s > i ? -1 : i > s ? 1 : 0
-            }), this._setDuration(), this.playlistCount = e.length
-        }, e.Side.prototype = {
-            getSong: function(t) {
-                return this.playlist[t]
-            },
-            getPlaylist: function() {
-                return this.playlist
-            },
-            _setDuration: function() {
-                this.duration = 0
-                for (var t = 0, e = this.playlist.length; e > t; ++t) this.duration += this.playlist[t].duration
-            },
-            getDuration: function() {
-                return this.duration
-            },
-            getPlaylistCount: function() {
-                return this.playlistCount
-            },
-            setPositionStatus: function(t) {
-                this.status = t
-            },
-            getPositionStatus: function() {
-                return this.status
-            }
-        }, e.Song = function(t, e) {
-            this.id = e, this.name = t, this._init()
-        }, e.Song.prototype = {
-            _init: function() {
-                this.sources = {
-                    "{{ site.media }}" + this.name
-                }
-            },
-            getSource: function(t) {
-                return this.sources[t]
-            },
-            loadMetadata: function() {
-                var t = this
-                return e.Deferred(function(i) {
-                    var n = e("<audio/>"),
-                        o = t.getSource(s.getSupportedType())
-                    n.attr("preload", "auto"), n.attr("src", o), n.on("loadedmetadata", function(e) {
-                        t.duration = n.get(0).duration, i.resolve(t)
-                    })
-                }).promise()
-            },
-            getDuration: function() {
-                return this.duration
-            }
-        }, e.Sound = function() {
-            this._init()
-        }, e.Sound.prototype = {
-            _init: function() {
-                this.$audio = e("<audio/>").attr("preload", "auto")
-            },
-            getSource: function(t) {
-                return "{{ site.media }}" + this.action
-            },
-            play: function(t, i) {
-                var n = this
-                return e.Deferred(function(o) {
-                    n.action = t
-                    var a = n.getSource(s.getSupportedType())
-                    n.$audio.attr("src", a), i ? n.$audio.attr("loop", i) : n.$audio.removeAttr("loop"), n.$audio.on("canplay", function(t) {
-                        setTimeout(function() {
-                            o.resolve()
-                        }, 500), e(this).get(0).play()
-                    })
-                })
-            }
-        }
-        var n = function(e) {
-            t.console && t.console.error(e)
-        }
-        e.fn.cassette = function(t) {
-            if ("string" == typeof t) {
-                var s = Array.prototype.slice.call(arguments, 1)
-                this.each(function() {
-                    var o = e.data(this, "cassette")
-                    return o ? e.isFunction(o[t]) && "_" !== t.charAt(0) ? (o[t].apply(o, s), i) : (n("no such method '" + t + "' for cassette instance"), i) : (n("cannot call methods on cassette prior to initialization; attempted to call method '" + t + "'"), i)
-                })
-            } else this.each(function() {
-                var i = e.data(this, "cassette")
-                i || e.data(this, "cassette", new e.Cassette(t, this))
-            })
-            return this
-        }
-    }(window, jQuery)
-
-</script>
+<script type="text/javascript">!function(t,e,i){var s={getSupportedType:function(){var t=document.createElement("audio")
+	return t.canPlayType("audio/mpeg;")?"mp3":t.canPlayType("audio/ogg;")?"ogg":"wav"}}
+	e.Cassette=function(t,i){this.$el=e(i),this._init(t)},e.Cassette.defaults={songs:[{{ page.side-a }},{{ page.side-b }}],fallbackMessage:"HTML5 audio not supported",initialVolume:.7},e.Cassette.prototype={_init:function(t){var i=this
+	this.options=e.extend(!0,{},e.Cassette.defaults,t),this.currentSide=1,this.cntTime=0,this.timeIterator=0,this.elapsed=0,this.lastaction="",this.isMoving=!1,this.$loader=this.$el.find("div.vc-loader").show(),e.when(this._createSides()).done(function(){i.$loader.hide(),i._createPlayer(),i.sound=new e.Sound,i._loadEvents()})},_getSide:function(){return 1===this.currentSide?{current:this.side1,reverse:this.side2}:{current:this.side2,reverse:this.side1}},_createSides:function(){var t=[],i=[],s=this,n=0
+	return e.Deferred(function(o){for(var a=0,r=s.options.songs.length;r>a;++a){var d=new e.Song(s.options.songs[a],a)
+	e.when(d.loadMetadata()).done(function(a){a.id<r/2?t.push(a):i.push(a),++n,n===r&&(s.side1=new e.Side("side1",t,"start"),s.side2=new e.Side("side2",i,"end"),o.resolve())})}}).promise()},_createPlayer:function(){this.$audioEl=e('<audio id="audioElem"><span>'+this.options.fallbackMessage+"</span></audio>"),this.$el.prepend(this.$audioEl),this.audio=this.$audioEl.get(0),this._createControls(),this.$theTape=this.$el.find("div.vc-tape"),this.$wheelLeft=this.$theTape.find("div.vc-tape-wheel-left"),this.$wheelRight=this.$theTape.find("div.vc-tape-wheel-right"),this.$tapeSideA=this.$theTape.find("div.vc-tape-side-a").show(),this.$tapeSideB=this.$theTape.find("div.vc-tape-side-b")},_createControls:function(){var t=this
+	this.$controls=e('<ul class="vc-controls" style="display:none;"/>'),this.$cPlay=e('<li class="vc-control-play">Play<span></span></li>'),this.$cRewind=e('<li class="vc-control-rewind">Rew<span></span></li>'),this.$cForward=e('<li class="vc-control-fforward">FF<span></span></li>'),this.$cStop=e('<li class="vc-control-stop">Stop<span></span></li>'),this.$cSwitch=e('<li class="vc-control-switch">Switch<span></span></li>'),this.$controls.append(this.$cPlay).append(this.$cRewind).append(this.$cForward).append(this.$cStop).append(this.$cSwitch).appendTo(this.$el),this.$volume=e('<div style="display:none;" class="vc-volume-wrap"><div class="vc-volume-control"><div class="vc-volume-knob"></div></div></div> ').appendTo(this.$el),document.createElement("audio").canPlayType&&(document.createElement("audio").canPlayType("audio/mpeg")||document.createElement("audio").canPlayType("audio/ogg"))&&(this.$controls.show(),this.$volume.show(),this.$volume.find("div.vc-volume-knob").knobKnob({snap:10,value:359*this.options.initialVolume,turn:function(e){t._changeVolume(e)}}),this.audio.volume=this.options.initialVolume)},_loadEvents:function(){var t=this
+	this.$cSwitch.on("mousedown",function(i){t._setButtonActive(e(this)),t._switchSides()}),this.$cPlay.on("mousedown",function(i){t._setButtonActive(e(this)),t._play()}),this.$cStop.on("mousedown",function(i){t._setButtonActive(e(this)),t._stop()}),this.$cForward.on("mousedown",function(i){t._setButtonActive(e(this)),t._forward()}),this.$cRewind.on("mousedown",function(i){t._setButtonActive(e(this)),t._rewind()}),this.$audioEl.on("timeupdate",function(e){t.cntTime=t.timeIterator+t.audio.currentTime
+	var i=t._getWheelValues(t.cntTime)
+	t._updateWheelValue(i)}),this.$audioEl.on("loadedmetadata",function(t){}),this.$audioEl.on("ended",function(e){t.timeIterator+=t.audio.duration,t._play()})},_setButtonActive:function(t){t.addClass("vc-control-pressed"),setTimeout(function(){t.removeClass("vc-control-pressed")},100)},_updateAction:function(t){this.lastaction=t},_prepare:function(t){this._clear(),this.$audioEl.attr("src",t.getSource(s.getSupportedType()))},_switchSides:function(){if(this.isMoving)return alert("Please stop the player before switching sides."),!1
+	this.sound.play("switch")
+	var t=this
+	this.lastaction="",1===this.currentSide?(this.currentSide=2,this.$theTape.css({"-webkit-transform":"rotate3d(0, 1, 0, 180deg)","-moz-transform":"rotate3d(0, 1, 0, 180deg)","-o-transform":"rotate3d(0, 1, 0, 180deg)","-ms-transform":"rotate3d(0, 1, 0, 180deg)",transform:"rotate3d(0, 1, 0, 180deg)"}),setTimeout(function(){t.$tapeSideA.hide(),t.$tapeSideB.show(),t.cntTime=t._getPosTime()},200)):(this.currentSide=1,this.$theTape.css({"-webkit-transform":"rotate3d(0, 1, 0, 0deg)","-moz-transform":"rotate3d(0, 1, 0, 0deg)","-o-transform":"rotate3d(0, 1, 0, 0deg)","-ms-transform":"rotate3d(0, 1, 0, 0deg)",transform:"rotate3d(0, 1, 0, 0deg)"}),setTimeout(function(){t.$tapeSideB.hide(),t.$tapeSideA.show(),t.cntTime=t._getPosTime()},200))},_updateButtons:function(t){var e="vc-control-active"
+	switch(this.$cPlay.removeClass(e),this.$cStop.removeClass(e),this.$cRewind.removeClass(e),this.$cForward.removeClass(e),t){case"play":this.$cPlay.addClass(e)
+	break
+	case"rewind":this.$cRewind.addClass(e)
+	break
+	case"forward":this.$cForward.addClass(e)}},_changeVolume:function(t){this.audio.volume=t},_play:function(){var t=this
+	this._updateButtons("play"),e.when(this.sound.play("click")).done(function(){var i=t._updateStatus()
+	i&&(t._prepare(t._getSide().current.getSong(i.songIdx)),t.$audioEl.on("canplay",function(s){e(this).off("canplay"),t.audio.currentTime=i.timeInSong,t.audio.play(),t.isMoving=!0,t._setWheelAnimation("2s","play")}))})},_updateStatus:function(t){var e=this.cntTime
+	if(this._stop(!0),this._setSidesPosStatus("middle"),"forward"===this.lastaction?e+=this.elapsed:"rewind"===this.lastaction&&(e-=this.elapsed),e>=this._getSide().current.getDuration())return this._stop(t),this._setSidesPosStatus("end"),!1
+	this._resetElapsed()
+	var i=this._getSongInfoByTime(e)
+	return this.cntTime=e,this.timeIterator=i.iterator,i},_rewind:function(){var t=this,s="rewind"
+	return"start"===this._getSide().current.getPositionStatus()?!1:(this._updateButtons(s),e.when(this.sound.play("click")).done(function(){t._updateStatus(!0),t.isMoving=!0,t._updateAction(s),t.sound.play("rewind",!0),t._setWheelAnimation("0.5s",s),t._timer()}),i)},_forward:function(){var t=this,s="forward"
+	return"end"===this._getSide().current.getPositionStatus()?!1:(this._updateButtons(s),e.when(this.sound.play("click")).done(function(){t._updateStatus(!0),t.isMoving=!0,t._updateAction(s),t.sound.play("fforward",!0),t._setWheelAnimation("0.5s",s),t._timer()}),i)},_stop:function(t){t||(this._updateButtons("stop"),this.sound.play("click")),this.isMoving=!1,this._stopWheels(),this.audio.pause(),this._stopTimer()},_clear:function(){this.$audioEl.children("source").remove()},_setSidesPosStatus:function(t){switch(this._getSide().current.setPositionStatus(t),t){case"middle":this._getSide().reverse.setPositionStatus(t)
+	break
+	case"start":this._getSide().reverse.setPositionStatus("end")
+	break
+	case"end":this._getSide().reverse.setPositionStatus("start")}},_getSongInfoByTime:function(t){for(var e={songIdx:0,timeInSong:0},i=this._getSide().current,s=i.getPlaylist(),n=i.getPlaylistCount(),o=0,a=0;n>a;++a){var r=s[a],d=r.getDuration()
+	if(o+=d,o>t)return e.songIdx=a,e.timeInSong=t-(o-d),e.iterator=o-d,e}return e},_getWheelValues:function(t){var e=this._getSide().current.getDuration(),i={left:1===this.currentSide?-70/e*t+70:70/e*t,right:1===this.currentSide?70/e*t:-70/e*t+70}
+	return i},_getPosTime:function(){var t=this.$wheelLeft.data("wheel"),e=this.$wheelRight.data("wheel")
+	t===i&&(t=70),e===i&&(e=0)
+	var s=this._getSide().current.getDuration(),n=2===this.currentSide?s*t/70:s*e/70
+	return n},_updateWheelValue:function(t){this.$wheelLeft.data("wheel",t.left).css({"box-shadow":"0 0 0 "+t.left+"px black"}),this.$wheelRight.data("wheel",t.right).css({"box-shadow":"0 0 0 "+t.right+"px black"})},_setWheelAnimation:function(t,e){var i=this,s=""
+	switch(this.currentSide){case 1:"play"===e||"forward"===e?s="rotateLeft":"rewind"===e&&(s="rotateRight")
+	break
+	case 2:"play"===e||"forward"===e?s="rotateRight":"rewind"===e&&(s="rotateLeft")}var n={"-webkit-animation":s+" "+t+" linear infinite forwards","-moz-animation":s+" "+t+" linear infinite forwards","-o-animation":s+" "+t+" linear infinite forwards","-ms-animation":s+" "+t+" linear infinite forwards",animation:s+" "+t+" linear infinite forwards"}
+	setTimeout(function(){i.$wheelLeft.css(n),i.$wheelRight.css(n)},0)},_stopWheels:function(){var t={"-webkit-animation":"none","-moz-animation":"none","-o-animation":"none","-ms-animation":"none",animation:"none"}
+	this.$wheelLeft.css(t),this.$wheelRight.css(t)},_timer:function(){var t=this,e=(new Date).getTime(),i=0
+	this._resetElapsed(),this.isSeeking=!0,this._setSidesPosStatus("middle"),this.isSeeking&&(clearTimeout(this.timertimeout),this.timertimeout=setTimeout(function(){t._timerinstance(e,i)},100))},_timerinstance:function(t,e){var i=this
+	e+=100,this.elapsed=Math.floor(e/20)/10,Math.round(this.elapsed)==this.elapsed&&(this.elapsed+=0)
+	var s=this.cntTime
+	"forward"===this.lastaction?s+=this.elapsed:"rewind"===this.lastaction&&(s-=this.elapsed)
+	var n=this._getWheelValues(s)
+	if(this._updateWheelValue(n),s>=this._getSide().current.getDuration()||0>=s)return this._stop(),0>=s?this.cntTime=0:this.cntTime=s,this._resetElapsed(),0>=s?this._setSidesPosStatus("start"):this._setSidesPosStatus("end"),!1
+	var o=(new Date).getTime()-t-e
+	this.isSeeking&&(clearTimeout(this.timertimeout),this.timertimeout=setTimeout(function(){i._timerinstance(t,e)},100-o))},_stopTimer:function(){clearTimeout(this.timertimeout),this.isSeeking=!1},_resetElapsed:function(){this.elapsed=0}},e.Side=function(t,e,i){this.id=t,this.status=i,this.playlist=e.sort(function(t,e){var i=t.id,s=e.id
+	return s>i?-1:i>s?1:0}),this._setDuration(),this.playlistCount=e.length},e.Side.prototype={getSong:function(t){return this.playlist[t]},getPlaylist:function(){return this.playlist},_setDuration:function(){this.duration=0
+	for(var t=0,e=this.playlist.length;e>t;++t)this.duration+=this.playlist[t].duration},getDuration:function(){return this.duration},getPlaylistCount:function(){return this.playlistCount},setPositionStatus:function(t){this.status=t},getPositionStatus:function(){return this.status}},e.Song=function(t,e){this.id=e,this.name=t,this._init()},e.Song.prototype={_init:function(){this.sources={mp3:"{{ site.media }}/assets/songs/"+this.name+".mp3",ogg:"{{ site.media }}/assets/songs/"+this.name+".ogg"}},getSource:function(t){return this.sources[t]},loadMetadata:function(){var t=this
+	return e.Deferred(function(i){var n=e("<audio/>"),o=t.getSource(s.getSupportedType())
+	n.attr("preload","auto"),n.attr("src",o),n.on("loadedmetadata",function(e){t.duration=n.get(0).duration,i.resolve(t)})}).promise()},getDuration:function(){return this.duration}},e.Sound=function(){this._init()},e.Sound.prototype={_init:function(){this.$audio=e("<audio/>").attr("preload","auto")},getSource:function(t){return"{{ site.media }}/assets/sounds/"+this.action+"."+t},play:function(t,i){var n=this
+	return e.Deferred(function(o){n.action=t
+	var a=n.getSource(s.getSupportedType())
+	n.$audio.attr("src",a),i?n.$audio.attr("loop",i):n.$audio.removeAttr("loop"),n.$audio.on("canplay",function(t){setTimeout(function(){o.resolve()},500),e(this).get(0).play()})})}}
+	var n=function(e){t.console&&t.console.error(e)}
+	e.fn.cassette=function(t){if("string"==typeof t){var s=Array.prototype.slice.call(arguments,1)
+	this.each(function(){var o=e.data(this,"cassette")
+	return o?e.isFunction(o[t])&&"_"!==t.charAt(0)?(o[t].apply(o,s),i):(n("no such method '"+t+"' for cassette instance"),i):(n("cannot call methods on cassette prior to initialization; attempted to call method '"+t+"'"),i)})}else this.each(function(){var i=e.data(this,"cassette")
+	i||e.data(this,"cassette",new e.Cassette(t,this))})
+	return this}}(window,jQuery)
+	</script>
