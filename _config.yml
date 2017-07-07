@@ -11,3 +11,4 @@ permalink: /:categories/:title
 #media: http://localhost:4000
 media: https://drive.google.com/uc?id=
 adbitly: https://adbitly.com/st/?api=2c7fc6867b37ffc6cc0b7308d00b2369b3f60ef1&url=
+droppages: http://kt4records.droppages.com
