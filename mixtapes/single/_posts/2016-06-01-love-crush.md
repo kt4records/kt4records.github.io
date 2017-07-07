@@ -7,7 +7,10 @@ category: Single
 tags: [rexly, krassrut]
 artist: "Rexly"
 description: "Love Crush<br>ft. Krassrut"
-artwork: "rexly-madness"
+artwork: "0BwOVcFj5qu4TRE5zd2xvMDhmSVE"
+cassete: "0BwOVcFj5qu4TNU9vUDdobHRLY3c"
+socialmedia: ""
+download: ""
 side-a: "'rexly_-_love_crush'"
 side-b: "'rexly_-_love_crush'"
 icon: '<i class="demo-icon icon-cassette"></i>'

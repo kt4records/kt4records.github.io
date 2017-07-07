@@ -7,7 +7,10 @@ category: Single
 tags: [rexly]
 artist: "Rexly"
 description: "Distraction"
-artwork: "rexly-distraction"
+artwork: "0BwOVcFj5qu4TR2VpMUUtYjZGanc"
+cassete: "0BwOVcFj5qu4TdE1VNWk4RlpWekE"
+socialmedia: ""
+download: ""
 side-a: "'rexly_-_distraction'"
 side-b: "'rexly_-_distraction'"
 icon: '<i class="demo-icon icon-cassette"></i>'

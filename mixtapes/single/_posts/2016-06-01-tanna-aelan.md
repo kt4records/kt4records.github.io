@@ -7,7 +7,10 @@ category: Single
 tags: [rexly, way_back_productions]
 artist: "Rexly"
 description: "Tanna Aelan<br>ft. Way Back Productions"
-artwork: "rexly-tanna-aelan"
+artwork: "0BwOVcFj5qu4Tb0gxUWFtSWE2QXM"
+cassete: "0BwOVcFj5qu4TeVdMVmw3cENFV1U"
+socialmedia: ""
+download: ""
 side-a: "'rexly_-_tanna_aelan'"
 side-b: "'rexly_-_tanna_aelan'"
 icon: '<i class="demo-icon icon-cassette"></i>'

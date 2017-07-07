@@ -7,7 +7,10 @@ category: Single
 tags: [hoobz, sheila_wills]
 artist: "Hoobz"
 description: "Safe Wetem Yu Remix<br>ft. Sheila Wills"
-artwork: "hoobz-safe-wetem-yu-remix"
+artwork: "0BwOVcFj5qu4TSUdPN3VjcmgyMFk"
+cassete: "0BwOVcFj5qu4TVV9Mb0ZvaTViQVE"
+socialmedia: ""
+download: ""
 side-a: "'hoobz_-_safe_wetem_yu_remix'"
 side-b: "'hoobz_-_safe_wetem_yu_remix'"
 icon: '<i class="demo-icon icon-cassette"></i>'
