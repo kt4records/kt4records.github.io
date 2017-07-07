@@ -8,7 +8,7 @@ tags: [jj_fresh]
 artist: "JJ Fresh"
 description: "Red Yellow Green mo Black"
 artwork: "0BwOVcFj5qu4TZWwxcTJBbkhfcDQ"
-cassete: "0BwOVcFj5qu4TTDM0TVBHWWF4V00"
+cassette: "0BwOVcFj5qu4TTDM0TVBHWWF4V00"
 socialmedia: ""
 download: ""
 side-a: "'jj_fresh_-_red_yellow_green_mo_black'"

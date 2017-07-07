@@ -8,7 +8,7 @@ tags: [rexly]
 artist: "Rexly"
 description: "Distraction"
 artwork: "0BwOVcFj5qu4TR2VpMUUtYjZGanc"
-cassete: "0BwOVcFj5qu4TdE1VNWk4RlpWekE"
+cassette: "0BwOVcFj5qu4TdE1VNWk4RlpWekE"
 socialmedia: ""
 download: ""
 side-a: "'rexly_-_distraction'"

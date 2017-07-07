@@ -8,7 +8,7 @@ tags: [rexly, krassrut]
 artist: "Rexly"
 description: "Love Crush<br>ft. Krassrut"
 artwork: "0BwOVcFj5qu4TRE5zd2xvMDhmSVE"
-cassete: "0BwOVcFj5qu4TNU9vUDdobHRLY3c"
+cassette: "0BwOVcFj5qu4TNU9vUDdobHRLY3c"
 socialmedia: ""
 download: ""
 side-a: "'rexly_-_love_crush'"
