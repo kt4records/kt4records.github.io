@@ -9,15 +9,7 @@
         e.Cassette = function(t, i) {
             this.$el = e(i), this._init(t)
         }, e.Cassette.defaults = {
-            songs: [{
-                {
-                    page.a
-                }
-            }, {
-                {
-                    page.b
-                }
-            }],
+            songs: [{{ page.a }}, {{ page.b }}],
             fallbackMessage: "HTML5 audio not supported",
             initialVolume: .7
         }, e.Cassette.prototype = {
