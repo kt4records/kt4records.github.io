@@ -150,6 +150,11 @@
     var n=function(n){$("a.sc-remote-link").toggleClass("playing","scPlayer:onMediaPlay"===n.type)}
     $(document).bind("scPlayer:onMediaPlay",n).bind("scPlayer:onMediaEnd",n).bind("scPlayer:onMediaPause",n)})
     </script>
+    <script type="text/javascript">
+	$(document).ready(function() {
+	  document.getElementsByTagName("html")[0].style.visibility = "visible";
+	});
+	</script>
 </body>
 
 </html>
