@@ -16,7 +16,7 @@
 		{% endif %}
     <ul class="list-group-item">
         <div class="brand"><i class="demo-icon icon-pin"></i> I N F O R M A T I O N S</div>
-        <span><img class="artwork" src="{{ site.media }}/assets/images/artwork/{{ page.artwork }}.jpg"/><br>
+        <span><img class="artwork" src="{{ site.media }}{{ page.artwork }}"/><br>
             Artist: {{ page.artist }}<br>
         {% if page.categories contains "Single" %}
             Title: {{ page.description }}
