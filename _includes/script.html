@@ -1,2 +1,13 @@
     <script type="text/javascript" src="{{ site.url }}/assets/js/jquery.min.js"></script>
     <script type="text/javascript" src="{{ site.url }}/assets/js/bootstrap.min.js"></script>
+    <script async type="text/javascript" src="{{ site.url }}/assets/js/soundcloud.player.api.min.js"></script>
+    <script async type="text/javascript" src="{{ site.url }}/assets/js/sc-player.min.js"></script>
+    <script type="text/javascript">
+    $.scPlayer.defaults.onDomReady=function(){$("a.sc-player, div.sc-player").scPlayer({randomize:!0})}
+    </script>
+    <script type="text/javascript">
+    $(function(){$(document).on("click","a.sc-remote-link",function(n){var a=($(this),$(".playing a.sc-pause"))
+    return a.length?a.click():$("a.sc-play:first").click(),!1})
+    var n=function(n){$("a.sc-remote-link").toggleClass("playing","scPlayer:onMediaPlay"===n.type)}
+    $(document).bind("scPlayer:onMediaPlay",n).bind("scPlayer:onMediaEnd",n).bind("scPlayer:onMediaPause",n)})
+    </script>
