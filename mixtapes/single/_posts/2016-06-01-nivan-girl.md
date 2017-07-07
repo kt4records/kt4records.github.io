@@ -8,6 +8,7 @@ tags: [rexly, riddiikal, alix]
 artist: "Rexly"
 description: "Nivan Girl (Brown Eye Girl)<br>ft. RiddiikaL &amp; Ali"
 artwork: "rexly-nivan-girl"
+download: "9hNMmVi"
 side-a: "'rexly_-_nivan_girl'"
 side-b: "'rexly_-_nivan_girl'"
 icon: '<i class="demo-icon icon-cassette"></i>'

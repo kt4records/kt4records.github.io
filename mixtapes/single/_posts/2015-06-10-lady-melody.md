@@ -8,6 +8,7 @@ tags: [janeth_barako, jay_p_nalei]
 artist: "Janeth Barako"
 description: "Lady Melody (Cover)<br>ft. Jay P Nalei"
 artwork: "janeth-barako-lady-melody"
+download: "oF7ZNE"
 side-a: "'janeth_barako_-_lady_melody'"
 side-b: "'janeth_barako_-_lady_melody'"
 icon: '<i class="demo-icon icon-cassette"></i>'
