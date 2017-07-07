@@ -10,7 +10,7 @@ description: "Tanna Aelan<br>ft. Way Back Productions"
 artwork: "0BwOVcFj5qu4Tb0gxUWFtSWE2QXM"
 cassette: "0BwOVcFj5qu4TeVdMVmw3cENFV1U"
 socialmedia: "0BwOVcFj5qu4TTEtNdnlWcmV5NmM"
-download: "0BwOVcFj5qu4TTjlSbWc4NEN4Vmc"
+download: "vfSNTE"
 side-a: "'rexly_-_tanna_aelan'"
 side-b: "'rexly_-_tanna_aelan'"
 icon: '<i class="demo-icon icon-cassette"></i>'
