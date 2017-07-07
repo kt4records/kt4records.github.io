@@ -134,12 +134,21 @@
 
     </div><!--/post-->
     {% include footer.html %}
-    {% include script.html %}
     {% include jquery.cassette.html %}
-    <script async type="text/javascript" src="{{ site.url }}/assets/js/transform.min.js"></script>
-    <script async type="text/javascript" src="{{ site.url }}/assets/js/knobKnob.jquery.min.js"></script>
+    <script type="text/javascript" src="{{ site.url }}/assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ site.url }}/assets/js/bootstrap.min.js"></script>
+    <script async type="text/javascript" src="{{ site.url }}/assets/js/main.js"></script>
     <script type="text/javascript">
-        $(function(){$("#vc-container").cassette()})
+    $(function(){$("#vc-container").cassette()})
+    </script>
+    <script type="text/javascript">
+    $.scPlayer.defaults.onDomReady=function(){$("a.sc-player, div.sc-player").scPlayer({randomize:!0})}
+    </script>
+    <script type="text/javascript">
+    $(function(){$(document).on("click","a.sc-remote-link",function(n){var a=($(this),$(".playing a.sc-pause"))
+    return a.length?a.click():$("a.sc-play:first").click(),!1})
+    var n=function(n){$("a.sc-remote-link").toggleClass("playing","scPlayer:onMediaPlay"===n.type)}
+    $(document).bind("scPlayer:onMediaPlay",n).bind("scPlayer:onMediaEnd",n).bind("scPlayer:onMediaPause",n)})
     </script>
 </body>
 
