@@ -374,7 +374,7 @@
 
 			this._updateButtons( 'play' );
 
-			$.when( this.sound.play( 'space' ) ).done( function() {
+			$.when( this.sound.play( 'click' ) ).done( function() {
 
 				var data	= _self._updateStatus();
 
@@ -890,7 +890,7 @@
 		},
 		getSource			: function( type ) {
 
-			return '{{ site.mdeia }}/assets/sounds/' + this.action + '.' + type;
+			return '{{ site.media }}/assets/sounds/' + this.action + '.' + type;
 
 		},
 		play				: function( action, loop ) {
