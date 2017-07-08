@@ -9,6 +9,7 @@ artist: "Rexly"
 description: "Distraction"
 artwork: "rexly-distraction"
 download: "a5J198"
+song: "'rexly_-_distraction_64Kbps'"
 side-a: "'rexly_-_distraction'"
 side-b: "'rexly_-_distraction'"
 icon: '<i class="demo-icon icon-cassette"></i>'
