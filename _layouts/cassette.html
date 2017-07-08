@@ -13,6 +13,7 @@
 <meta property="og:title" content="{{ page.title }}" />
 <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
 <meta property="og:description" content="{{ page.artist }} - {{ page.description | replace:'<br>',' ' | replace:'<hr>',' ' }}" />
+<link rel="preload" as="media" href="{{ site.media }}/assets/songs/{{ page.song | remove:"'" }}.mp3?{{site.time | date: '%s%N'}}">
 <meta property="og:image" content="{{ site.media }}/assets/images/socialmedia/{{ page.artwork }}.jpg" />
 <meta property="og:image:width" content="600" />
 <meta property="og:image:height" content="315" />
