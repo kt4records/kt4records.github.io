@@ -18,8 +18,8 @@
 <meta property="og:description" content="{{ page.artist }} - {{ page.description | replace:'<br>',' ' | replace:'<hr>',' ' }}" />
 <meta property="og:image" content="{{ site.media }}/assets/images/socialmedia/{{ page.artwork }}.jpg" />
 <meta property="og:image:height" content="600" />
-<link rel="stylesheet" href="{{ site.url }}/assets/css/bootstrap.min.css" type="text/css">
-<link rel="stylesheet" href="{{ site.url }}/assets/css/main.css" type="text/css">
+<link href="{{ "/assets/css/bootstrap.min.css" | prepend: site.url }}?{{site.time | date: '%s%N'}}" rel="stylesheet">
+<link href="{{ "/assets/css/main.css" | prepend: site.url }}?{{site.time | date: '%s%N'}}" rel="stylesheet">
 {% include style.html %}
 {% include knobKnob.html %}
 <script async type="text/javascript" src="{{ site.url }}/assets/js/modernizr.custom.69142.js"></script>
