@@ -22,7 +22,7 @@
 <link href="{{ "/assets/css/main.css" | prepend: site.url }}?{{site.time | date: '%s%N'}}" rel="stylesheet">
 {% include style.html %}
 {% include knobKnob.html %}
-<script async type="text/javascript" src="{{ site.url }}/assets/js/modernizr.custom.69142.js"></script>
+<script async type="text/javascript" src="{{ "/assets/js/modernizr.custom.69142.js" | prepend: site.url }}?{{site.time | date: '%s%N'}}"></script>
 <!--[if IE]>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -117,10 +117,10 @@
 
     </div><!--/post-->
     {% include footer.html %}
-    <script type="text/javascript" src="{{ site.url }}/assets/js/jquery.min.js"></script>
-    <script type="text/javascript" src="{{ site.url }}/assets/js/bootstrap.min.js"></script>
-    <script async type="text/javascript" src="{{ site.url }}/assets/js/transform.min.js"></script>
-    <script async type="text/javascript" src="{{ site.url }}/assets/js/knobKnob.jquery.min.js"></script>
+    <script type="text/javascript" src="{{ "/assets/js/jquery.min.js" | prepend: site.url }}?{{site.time | date: '%s%N'}}"></script>
+    <script type="text/javascript" src="{{ "/assets/js/bootstrap.min.js" | prepend: site.url }}?{{site.time | date: '%s%N'}}"></script>
+    <script async type="text/javascript" src="{{ "/assets/js/transform.min.js" | prepend: site.url }}?{{site.time | date: '%s%N'}}"></script>
+    <script async type="text/javascript" src="{{ "/assets/js/knobKnob.jquery.min.js" | prepend: site.url }}?{{site.time | date: '%s%N'}}"></script>
     {% include jquery.cassette.html %}
     <script type="text/javascript">
         $(function(){$("#vc-container").cassette()})
