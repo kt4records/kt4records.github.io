@@ -9,6 +9,7 @@ artist: "Hoobz"
 description: "Safe Wetem Yu Remix<br>ft. Sheila Wills"
 artwork: "hoobz-safe-wetem-yu-remix"
 download: "urrDn"
+song: "'hoobz_-_safe_wetem_yu_remix_64Kbps'"
 side-a: "'hoobz_-_safe_wetem_yu_remix'"
 side-b: "'hoobz_-_safe_wetem_yu_remix'"
 icon: '<i class="demo-icon icon-cassette"></i>'
