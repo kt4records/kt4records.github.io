@@ -9,7 +9,7 @@ artist: "JJ Fresh"
 description: "Red Yellow Green mo Black"
 artwork: "jj-fresh-red-yellow-green-mo-black"
 download: "EaO9JZ"
-song: "'jj_fresh_-_red_yellow_green_mo_black_64Kbps'"
+song: "'jj_fresh_-_red_yellow_green_mo_black'"
 side-a: "'jj_fresh_-_red_yellow_green_mo_black'"
 side-b: "'jj_fresh_-_red_yellow_green_mo_black'"
 icon: '<i class="demo-icon icon-cassette"></i>'

@@ -9,7 +9,7 @@ artist: "Rexly"
 description: "Tanna Aelan<br>ft. Way Back Productions"
 artwork: "rexly-tanna-aelan"
 download: "vfSNTE"
-song: "'rexly_-_tanna_aelan_64Kbps'"
+song: "'rexly_-_tanna_aelan'"
 side-a: "'rexly_-_tanna_aelan'"
 side-b: "'rexly_-_tanna_aelan'"
 icon: '<i class="demo-icon icon-cassette"></i>'
