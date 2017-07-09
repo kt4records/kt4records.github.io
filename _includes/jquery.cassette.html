@@ -17,7 +17,7 @@
 	break
 	case"forward":this.$cForward.addClass(e)}},_changeVolume:function(t){this.audio.volume=t},_play:function(){var t=this
 	this._updateButtons("play"),e.when(this.sound.play("click")).done(function(){var i=t._updateStatus()
-	i&&(t._prepare(t._getSide().current.getSong(i.songIdx)),t.$audioEl.on("canplay",function(s){e(this).off("canplay"),t.audio.currentTime="218",t.audio.play(),t.isMoving=!0,t._setWheelAnimation("2s","play")}))})},_updateStatus:function(t){var e=this.cntTime
+	i&&(t._prepare(t._getSide().current.getSong(i.songIdx)),t.$audioEl.on("canplay",function(s){e(this).off("canplay"),t.audio.currentTime=i.timeInSong,t.audio.play(),t.isMoving=!0,t._setWheelAnimation("2s","play")}))})},_updateStatus:function(t){var e=this.cntTime
 	if(this._stop(!0),this._setSidesPosStatus("middle"),"forward"===this.lastaction?e+=this.elapsed:"rewind"===this.lastaction&&(e-=this.elapsed),e>=this._getSide().current.getDuration())return this._stop(t),this._setSidesPosStatus("end"),!1
 	this._resetElapsed()
 	var i=this._getSongInfoByTime(e)
@@ -39,7 +39,7 @@
 	setTimeout(function(){i.$wheelLeft.css(n),i.$wheelRight.css(n)},0)},_stopWheels:function(){var t={"-webkit-animation":"none","-moz-animation":"none","-o-animation":"none","-ms-animation":"none",animation:"none"}
 	this.$wheelLeft.css(t),this.$wheelRight.css(t)},_timer:function(){var t=this,e=(new Date).getTime(),i=0
 	this._resetElapsed(),this.isSeeking=!0,this._setSidesPosStatus("middle"),this.isSeeking&&(clearTimeout(this.timertimeout),this.timertimeout=setTimeout(function(){t._timerinstance(e,i)},100))},_timerinstance:function(t,e){var i=this
-	e+=100,this.elapsed=Math.floor(e/20)/10,Math.round(this.elapsed)==this.elapsed&&(this.elapsed+=0)
+	e+=100,this.elapsed=Math.floor(e/20)/1,Math.round(this.elapsed)==this.elapsed&&(this.elapsed+=0)
 	var s=this.cntTime
 	"forward"===this.lastaction?s+=this.elapsed:"rewind"===this.lastaction&&(s-=this.elapsed)
 	var n=this._getWheelValues(s)
