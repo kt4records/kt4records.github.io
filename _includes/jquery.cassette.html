@@ -17,7 +17,7 @@
 	break
 	case"forward":this.$cForward.addClass(e)}},_changeVolume:function(t){this.audio.volume=t},_play:function(){var t=this
 	this._updateButtons("play"),e.when(this.sound.play("click")).done(function(){var i=t._updateStatus()
-	i&&(t._prepare(t._getSide().current.getSong(i.songIdx)),t.$audioEl.on("canplay",function(s){e(this).off("canplay"),t.audio.currentTime=218,t.audio.play(),t.isMoving=!0,t._setWheelAnimation("2s","play")}))})},_updateStatus:function(t){var e=this.cntTime
+	i&&(t._prepare(t._getSide().current.getSong(i.songIdx)),t.$audioEl.on("canplay",function(s){e(this).off("canplay"),t.audio.currentTime=i.timeInSong,t.audio.play(),t.isMoving=!0,t._setWheelAnimation("2s","play")}))})},_updateStatus:function(t){var e=this.cntTime
 	if(this._stop(!0),this._setSidesPosStatus("middle"),"forward"===this.lastaction?e+=this.elapsed:"rewind"===this.lastaction&&(e-=this.elapsed),e>=this._getSide().current.getDuration())return this._stop(t),this._setSidesPosStatus("end"),!1
 	this._resetElapsed()
 	var i=this._getSongInfoByTime(e)
