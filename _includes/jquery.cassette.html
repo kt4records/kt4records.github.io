@@ -52,7 +52,7 @@
 	n.attr("preload","auto"),n.attr("src",o),n.on("loadedmetadata",function(e){t.duration=n.get(0).duration,i.resolve(t)})}).promise()},getDuration:function(){return this.duration}},e.Sound=function(){this._init()},e.Sound.prototype={_init:function(){this.$audio=e("<audio/>").attr("preload","auto")},getSource:function(t){return"{{ site.media }}/assets/sounds/"+this.action+"."+t},play:function(t,i){var n=this
 	return e.Deferred(function(o){n.action=t
 	var a=n.getSource(s.getSupportedType())
-	n.$audio.attr("src",a),i?n.$audio.attr("loop",i):n.$audio.removeAttr("loop"),n.$audio.on("canplay",function(t){setTimeout(function(){o.resolve()},1500),e(this).get(0).play()})})}}
+	n.$audio.attr("src",a),i?n.$audio.attr("loop",i):n.$audio.removeAttr("loop"),n.$audio.on("canplay",function(t){setTimeout(function(){o.resolve()},0),e(this).get(0).play()})})}}
 	var n=function(e){t.console&&t.console.error(e)}
 	e.fn.cassette=function(t){if("string"==typeof t){var s=Array.prototype.slice.call(arguments,1)
 	this.each(function(){var o=e.data(this,"cassette")
