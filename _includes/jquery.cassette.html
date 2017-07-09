@@ -39,7 +39,7 @@
 	setTimeout(function(){i.$wheelLeft.css(n),i.$wheelRight.css(n)},0)},_stopWheels:function(){var t={"-webkit-animation":"none","-moz-animation":"none","-o-animation":"none","-ms-animation":"none",animation:"none"}
 	this.$wheelLeft.css(t),this.$wheelRight.css(t)},_timer:function(){var t=this,e=(new Date).getTime(),i=0
 	this._resetElapsed(),this.isSeeking=!0,this._setSidesPosStatus("middle"),this.isSeeking&&(clearTimeout(this.timertimeout),this.timertimeout=setTimeout(function(){t._timerinstance(e,i)},100))},_timerinstance:function(t,e){var i=this
-	e+=100,this.elapsed=Math.floor(e/20)/1,Math.round(this.elapsed)==this.elapsed&&(this.elapsed+=0)
+	e+=100,this.elapsed=Math.floor(e/20)/10,Math.round(this.elapsed)==this.elapsed&&(this.elapsed+=0)
 	var s=this.cntTime
 	"forward"===this.lastaction?s+=this.elapsed:"rewind"===this.lastaction&&(s-=this.elapsed)
 	var n=this._getWheelValues(s)
